@@ -1,3 +1,73 @@
-.hero {
-  background-image: url("");
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("opentype");
+  src: url("../../assets/font/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/font/AvenirNextLTPro-Demi.otf") format("opentype");
+  src: url("../../assets/font/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/font/AvenirNextLTPro-Bold.otf") format("opentype");
+  src: url("../../assets/font/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Avenir", sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+}
+
+body p {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+footer p {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+.nav .hero {
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
 }/*# sourceMappingURL=bio.css.map */

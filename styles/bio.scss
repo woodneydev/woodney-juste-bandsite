@@ -1,6 +1,15 @@
 @use "partials/variables" as *;
 @use "partials/mixins" as *;
+@use "partials/global";
 
-.hero {
-    background-image: url("");
+.nav {
+
+    .hero {
+        background-image: url("../assets/images/hero-bio.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 20vh;
+        @include flex-box(null, center);
+        color: $primary3;
+    }
 }

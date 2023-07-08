@@ -1,6 +1,5 @@
 @use "variables" as *;
 
-// text-styling
 @mixin mobile-header {
     font-size: $mobile-header-font;
     line-height: 2rem; 
@@ -59,4 +58,23 @@
     font-size: $label-font;
     line-height: 1.25rem;
     font-weight: 700;
+}
+
+@mixin flex-box($justify-content: normal, $align-items: normal) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+
+@mixin tablet {
+    @media screen and (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
 }

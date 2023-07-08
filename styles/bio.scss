@@ -4,6 +4,31 @@
 
 .nav {
 
+    &-bar {
+        background-color: $primary1;
+        color: $primary3;
+        //sets display to flex, params: (justify-content, align-items, flex-direction) - null sets default behavior
+        @include flex-box(center, center, column);
+        
+        &__img {
+            margin-top: $mobile-padding-btw-components;
+        }
+
+        &__list {
+            @include flex-box(space-around, flex-end, row);
+            list-style-type: none;
+            width: 100%;
+
+            &-item {
+                text-align: center;
+                padding-top: $mobile-padding-btw-components;
+                padding-bottom: $mobile-padding-btw-components;
+                width: 50%;
+                border-bottom: 8px solid white;
+            }
+        }
+    }
+
     .hero {
         background-image: url("../assets/images/hero-bio.jpg");
         background-position: center;

@@ -39,21 +39,41 @@
 }
 
 h1 {
-    @include mobile-header
+    @include mobile-header;
+    
+    @include tablet {
+        @include page-header;
+    }
 }
 
 h2 {
-    @include mobile-header
+    @include mobile-section-header;
+
+    @include tablet {
+        @include section-header;
+    }
 }
 
 h3 {
-    @include mobile-subheader
+    @include mobile-subheader;
+
+    @include tablet {
+        @include subheader;
+    }
 }
 
 body p {
-    @include mobile-body
+    @include mobile-body;
+
+    @include tablet {
+        @include body-copy;
+    }
 }
 
 footer p {
-    @include mobile-body
+    @include mobile-footer-copy;
+
+    @include tablet {
+        @include footer-copy;
+    }
 }

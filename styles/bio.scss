@@ -1,40 +1,55 @@
-@use "partials/variables" as *;
-@use "partials/mixins" as *;
+@use "partials/variables"as *;
+@use "partials/mixins"as *;
 @use "partials/global";
 
-.nav {
+.main {
+    background-color: $primary3;
 
-    &-bar {
-        background-color: $primary1;
-        color: $primary3;
-        //sets display to flex, params: (justify-content, align-items, flex-direction) - null sets default behavior
-        @include flex-box(center, center, column);
-        
-        &__img {
-            margin-top: $mobile-padding-btw-components;
+    .intro {
+        width: 100%;
+
+        &__title {
+            color: $primary1;
+            @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
         }
 
-        &__list {
-            @include flex-box(space-around, flex-end, row);
-            list-style-type: none;
+        &__img {
+            width: 100%;
+            padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
+        }
+
+        &__quote{
+            @include mobile-subheader;
+            padding: 0 $mobile-padding-btw-components
+        }
+    }
+
+    .article {
+
+        &__title {
+            @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
+        }
+
+        &__text {
+            padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
+        }
+    }
+
+    .gallery {
+        background-color: $seconday3;
+
+        &__title {
+            @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
+        }
+
+        &__collection {
             width: 100%;
 
-            &-item {
-                text-align: center;
-                padding-top: $mobile-padding-btw-components;
-                padding-bottom: $mobile-padding-btw-components;
-                width: 50%;
-                border-bottom: 8px solid white;
+            &-img {
+                width: 100%;
+                padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
             }
         }
     }
 
-    .hero {
-        background-image: url("../assets/images/hero-bio.jpg");
-        background-position: center;
-        background-size: cover;
-        height: 20vh;
-        @include flex-box(null, center);
-        color: $primary3;
-    }
 }

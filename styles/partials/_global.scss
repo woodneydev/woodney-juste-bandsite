@@ -1,4 +1,5 @@
 @use "mixins" as *;
+@use "variables" as *;
 
 @font-face {
     font-family: "Avenir";
@@ -40,7 +41,6 @@
 
 h1 {
     @include mobile-header;
-    
     @include tablet {
         @include page-header;
     }
@@ -48,7 +48,7 @@ h1 {
 
 h2 {
     @include mobile-section-header;
-
+    color: $primary1;
     @include tablet {
         @include section-header;
     }
@@ -56,15 +56,15 @@ h2 {
 
 h3 {
     @include mobile-subheader;
-
+    color: $primary1;
     @include tablet {
         @include subheader;
     }
 }
 
-body p {
+p {
     @include mobile-body;
-
+    color: $primary1;
     @include tablet {
         @include body-copy;
     }
@@ -72,8 +72,91 @@ body p {
 
 footer p {
     @include mobile-footer-copy;
-
+    color: $primary3;
     @include tablet {
         @include footer-copy;
+    }
+}
+
+
+.nav {
+
+    &-bar {
+        background-color: $primary1;
+        color: $primary3;
+        //sets display to flex, params: (justify-content, align-items, flex-direction) - null sets default behavior
+        @include flex-box(center, center, column);
+
+        &__img {
+            margin-top: $mobile-padding-btw-components;
+            width: 120px;
+        }
+
+        &__list {
+            @include flex-box(space-around, flex-end, row);
+            list-style-type: none;
+            width: 100%;
+
+            &-item {
+                text-align: center;
+                padding-top: $mobile-padding-btw-components;
+                padding-bottom: $mobile-padding-btw-components;
+                width: 50%;
+
+                &--active {
+                    border-bottom: .25rem solid $primary3;
+                }
+            }
+        }
+    }
+
+    .hero {
+        background-image: url("../../assets/images/hero-bio.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 20vh;
+        color: $primary3;
+
+        &__title {
+            width: 100%;
+            height: 100%;
+            padding-left: $mobile-padding-btw-components;
+            background-color: #32323250;
+            @include flex-box(null, center);
+        }
+    }
+}
+
+.footer {
+    background-color: $primary1;
+
+    .card {
+
+        &__title {
+            color: $primary3;
+            @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
+        }
+
+        &__collection {
+            padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
+
+            &-img {
+                height: 1.5rem;
+                margin-right: 1.5rem;
+            }
+
+            &-group {
+                padding-bottom: $mobile-padding-btw-components;
+            }
+        }
+    }
+
+    &__img {
+        margin-top: $mobile-padding-bf-headlines;
+        padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
+    }
+
+    &__legal {
+        padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
     }
 }

@@ -49,6 +49,7 @@ h2 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
+  color: #323232;
 }
 @media screen and (min-width: 768px) {
   h2 {
@@ -62,6 +63,7 @@ h3 {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
+  color: #323232;
 }
 @media screen and (min-width: 768px) {
   h3 {
@@ -71,13 +73,14 @@ h3 {
   }
 }
 
-body p {
+p {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
+  color: #323232;
 }
 @media screen and (min-width: 768px) {
-  body p {
+  p {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 400;
@@ -88,6 +91,7 @@ footer p {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
+  color: #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   footer p {
@@ -107,6 +111,7 @@ footer p {
 }
 .nav-bar__img {
   margin-top: 1rem;
+  width: 120px;
 }
 .nav-bar__list {
   display: flex;
@@ -121,15 +126,88 @@ footer p {
   padding-top: 1rem;
   padding-bottom: 1rem;
   width: 50%;
-  border-bottom: 8px solid white;
+}
+.nav-bar__list-item--active {
+  border-bottom: 0.25rem solid #FFFFFF;
 }
 .nav .hero {
-  background-image: url("../assets/images/hero-bio.jpg");
+  background-image: url("../../assets/images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
   height: 20vh;
+  color: #FFFFFF;
+}
+.nav .hero__title {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  background-color: rgba(50, 50, 50, 0.3137254902);
   display: flex;
   align-items: center;
   flex-direction: row;
+}
+
+.footer {
+  background-color: #323232;
+}
+.footer .card__title {
   color: #FFFFFF;
+  padding: 1.5rem 1rem 1rem;
+}
+.footer .card__collection {
+  padding: 0 1rem 1rem;
+}
+.footer .card__collection-img {
+  height: 1.5rem;
+  margin-right: 1.5rem;
+}
+.footer .card__collection-group {
+  padding-bottom: 1rem;
+}
+.footer__img {
+  margin-top: 1.5rem;
+  padding: 0 1rem 1rem;
+}
+.footer__legal {
+  padding: 0 1rem 1rem;
+}
+
+.main {
+  background-color: #FFFFFF;
+}
+.main .intro {
+  width: 100%;
+}
+.main .intro__title {
+  color: #323232;
+  padding: 1.5rem 1rem 1rem;
+}
+.main .intro__img {
+  width: 100%;
+  padding: 0 1rem 1rem;
+}
+.main .intro__quote {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  padding: 0 1rem;
+}
+.main .article__title {
+  padding: 1.5rem 1rem 1rem;
+}
+.main .article__text {
+  padding: 0 1rem 1rem;
+}
+.main .gallery {
+  background-color: #FAFAFA;
+}
+.main .gallery__title {
+  padding: 1.5rem 1rem 1rem;
+}
+.main .gallery__collection {
+  width: 100%;
+}
+.main .gallery__collection-img {
+  width: 100%;
+  padding: 0 1rem 1rem;
 }/*# sourceMappingURL=bio.css.map */

@@ -79,6 +79,10 @@
     flex-direction: $flex-direction;
 }
 
+@mixin title-spacing($padding-bf-headlines, $padding-btw-compenents, $padding-af-headlines) {
+    padding: $padding-bf-headlines $padding-btw-compenents $padding-af-headlines;
+
+}
 
 @mixin tablet {
     @media screen and (min-width: $tablet) {

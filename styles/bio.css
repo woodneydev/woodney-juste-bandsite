@@ -19,12 +19,6 @@
   font-weight: bold;
   font-style: normal;
 }
-@font-face {
-  font-family: "Avenir";
-  src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
 * {
   padding: 0;
   margin: 0;
@@ -146,9 +140,20 @@ footer p {
   align-items: center;
   flex-direction: row;
 }
+@media screen and (min-width: 768px) {
+  .nav .hero {
+    height: 40vh;
+  }
+}
 
 .footer {
   background-color: #323232;
+  display: flex;
+  flex-direction: column;
+}
+.footer .card {
+  display: flex;
+  flex-direction: column;
 }
 .footer .card__title {
   color: #FFFFFF;
@@ -164,12 +169,43 @@ footer p {
 .footer .card__collection-group {
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .footer .card__collection--img {
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer .card--social {
+    order: -2;
+    width: 430px;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer .card {
+    flex-direction: row;
+  }
+}
 .footer__img {
   margin-top: 1.5rem;
   padding: 0 1rem 1rem;
+  width: 7.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__img {
+    order: -1;
+  }
 }
 .footer__legal {
   padding: 0 1rem 1rem;
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .main {
@@ -205,9 +241,25 @@ footer p {
   padding: 1.5rem 1rem 1rem;
 }
 .main .gallery__collection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
 }
 .main .gallery__collection-img {
   width: 100%;
   padding: 0 1rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .main .gallery__collection-img {
+    width: 30%;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main .gallery__collection {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=bio.css.map */

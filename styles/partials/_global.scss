@@ -85,7 +85,7 @@ footer p {
             width: 120px;
 
             @include tablet {
-                margin: 0 32px;
+                margin: 0 $padding-between-components;
             }
         }
 
@@ -129,10 +129,14 @@ footer p {
             padding-left: $mobile-padding-btw-components;
             background-color: #32323250;
             @include flex-box(null, center);
+
+            @include tablet {
+                padding-left: $padding-between-components;
+            }
         }
 
         @include tablet {
-            height: 40vh;
+            height: 60vh;
             
         }
     }

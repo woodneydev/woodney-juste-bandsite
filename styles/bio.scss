@@ -24,7 +24,8 @@
                 // padding: 0 32px
                 // padding: 0 $padding-between-components $padding-between-components;
 
-                padding: 0 10%;
+                padding: 0 13%;
+                margin-bottom: $padding-between-components;
                 display: flex;
                 justify-content: center;
 
@@ -37,8 +38,17 @@
             
             @include tablet {
                 padding: 0 $padding-between-components;
-                margin: 0 10%;
+                margin: 0 64px;
             }
+
+            &--large {
+                @include tablet {
+                    @include subheader;
+                    color: $primary1;
+                    padding-bottom: 16px;
+                }
+            }
+            
         }
     }
 
@@ -46,6 +56,11 @@
 
         &__title {
             @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
+
+            @include tablet {
+                @include title-spacing($padding-before-headlines, $mobile-padding-btw-components, $padding-after-headlines);
+
+            }
         }
 
         &__content {
@@ -61,7 +76,7 @@
 
         @include tablet {
             padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
-            margin: 0 10%;
+            margin: 0 64px;
         }
     }
 
@@ -72,7 +87,7 @@
             @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
 
             @include tablet {
-                @include title-spacing($padding-before-headlines, 2rem, $padding-after-headlines);
+                @include title-spacing($padding-before-headlines, $padding-between-components, $padding-after-headlines);
             }
         }
 

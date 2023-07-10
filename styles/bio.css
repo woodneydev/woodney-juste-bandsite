@@ -71,7 +71,6 @@ p {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
-  color: #323232;
 }
 @media screen and (min-width: 768px) {
   p {
@@ -146,7 +145,7 @@ footer p {
   background-image: url("../../assets/images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
-  height: 20vh;
+  height: 35vh;
   color: #FFFFFF;
 }
 .nav .hero__title {
@@ -165,7 +164,7 @@ footer p {
 }
 @media screen and (min-width: 768px) {
   .nav .hero {
-    height: 60vh;
+    height: 80vh;
   }
 }
 
@@ -181,6 +180,11 @@ footer p {
 .footer .card__title {
   color: #FFFFFF;
   padding: 1.5rem 1rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer .card__title {
+    padding-right: 8px;
+  }
 }
 .footer .card__collection {
   padding: 0 1rem 1rem;
@@ -213,7 +217,7 @@ footer p {
 @media screen and (min-width: 768px) {
   .footer .card {
     flex-direction: row;
-    margin: 0 16px;
+    margin: 0 18px;
   }
 }
 .footer__img {
@@ -232,7 +236,7 @@ footer p {
 @media screen and (min-width: 768px) {
   .footer__legal {
     width: 100%;
-    margin: 0 16px;
+    margin: 0 20px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -261,7 +265,8 @@ footer p {
 }
 @media screen and (min-width: 768px) {
   .main .intro__img {
-    padding: 0 10%;
+    padding: 0 13%;
+    margin-bottom: 2.25rem;
     display: flex;
     justify-content: center;
   }
@@ -275,11 +280,25 @@ footer p {
 @media screen and (min-width: 768px) {
   .main .intro__quote {
     padding: 0 2.25rem;
-    margin: 0 10%;
+    margin: 0 64px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main .intro__quote--large {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: #323232;
+    padding-bottom: 16px;
   }
 }
 .main .article__title {
   padding: 1.5rem 1rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .main .article__title {
+    padding: 3rem 1rem 2.25rem;
+  }
 }
 .main .article__content-text {
   padding: 0 1rem 1rem;
@@ -292,7 +311,7 @@ footer p {
 @media screen and (min-width: 768px) {
   .main .article {
     padding: 0 1rem 1rem;
-    margin: 0 10%;
+    margin: 0 64px;
   }
 }
 .main .gallery {
@@ -303,7 +322,7 @@ footer p {
 }
 @media screen and (min-width: 768px) {
   .main .gallery__title {
-    padding: 3rem 2rem 2.25rem;
+    padding: 3rem 2.25rem 2.25rem;
   }
 }
 .main .gallery__collection {

@@ -57,7 +57,6 @@ h3 {
 
 p {
     @include mobile-body;
-    color: $primary1;
     @include tablet {
         @include body-copy;
     }
@@ -120,7 +119,7 @@ footer p {
         background-image: url("../../assets/images/hero-bio.jpg");
         background-position: center;
         background-size: cover;
-        height: 20vh;
+        height: 35vh;
         color: $primary3;
 
         &__title {
@@ -136,7 +135,7 @@ footer p {
         }
 
         @include tablet {
-            height: 60vh;
+            height: 80vh;
             
         }
     }
@@ -152,6 +151,10 @@ footer p {
         &__title {
             color: $primary3;
             @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
+
+            @include tablet {
+                padding-right: 8px;
+            }
         }
 
         &__collection {
@@ -191,7 +194,7 @@ footer p {
 
         @include tablet {
             flex-direction: row;
-            margin: 0 16px;
+            margin: 0 18px;
         }
     }
 
@@ -210,7 +213,7 @@ footer p {
 
         @include tablet {
             width: 100%;
-           margin: 0 16px;
+           margin: 0 20px;
         }
     }
 

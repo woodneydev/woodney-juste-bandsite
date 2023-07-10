@@ -16,11 +16,19 @@
         &__img {
             width: 100%;
             padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
+
+            @include tablet {
+                padding: 0 32px
+            }
         }
 
         &__quote{
             @include mobile-subheader;
-            padding: 0 $mobile-padding-btw-components
+            padding: 0 $mobile-padding-btw-components;
+            
+            @include tablet {
+                margin: 0 32px
+            }
         }
     }
 
@@ -30,8 +38,19 @@
             @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
         }
 
-        &__text {
-            padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
+        &__content {
+            &-text {
+                padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
+            }
+
+            @include tablet {
+                display: flex;
+            }
+        }
+
+
+        @include tablet {
+            margin: 0 64px;
         }
     }
 

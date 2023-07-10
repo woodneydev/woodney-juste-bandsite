@@ -95,8 +95,10 @@ footer p {
   }
 }
 
-.nav-bar {
+.nav {
   background-color: #323232;
+}
+.nav-bar {
   color: #FFFFFF;
   display: flex;
   justify-content: center;
@@ -106,6 +108,11 @@ footer p {
 .nav-bar__img {
   margin-top: 1rem;
   width: 120px;
+}
+@media screen and (min-width: 768px) {
+  .nav-bar__img {
+    margin: 0 32px;
+  }
 }
 .nav-bar__list {
   display: flex;
@@ -121,8 +128,19 @@ footer p {
   padding-bottom: 1rem;
   width: 50%;
 }
+@media screen and (min-width: 768px) {
+  .nav-bar__list-item {
+    padding: 32px 0;
+  }
+}
 .nav-bar__list-item--active {
   border-bottom: 0.25rem solid #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .nav-bar {
+    flex-direction: row;
+    width: 50%;
+  }
 }
 .nav .hero {
   background-image: url("../../assets/images/hero-bio.jpg");
@@ -176,6 +194,11 @@ footer p {
   }
 }
 @media screen and (min-width: 768px) {
+  .footer .card__collection--contact {
+    margin-right: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
   .footer .card--social {
     order: -2;
     width: 430px;
@@ -185,6 +208,7 @@ footer p {
 @media screen and (min-width: 768px) {
   .footer .card {
     flex-direction: row;
+    margin: 0 16px;
   }
 }
 .footer__img {
@@ -200,7 +224,13 @@ footer p {
 .footer__legal {
   padding: 0 1rem 1rem;
 }
-@media screen and (min-width: 768px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .footer__legal {
+    width: 100%;
+    margin: 0 16px;
+  }
+}
+@media screen and (min-width: 768px) {
   .footer {
     flex-direction: row;
     justify-content: space-between;
@@ -222,17 +252,37 @@ footer p {
   width: 100%;
   padding: 0 1rem 1rem;
 }
+@media screen and (min-width: 768px) {
+  .main .intro__img {
+    padding: 0 32px;
+  }
+}
 .main .intro__quote {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
   padding: 0 1rem;
 }
+@media screen and (min-width: 768px) {
+  .main .intro__quote {
+    margin: 0 32px;
+  }
+}
 .main .article__title {
   padding: 1.5rem 1rem 1rem;
 }
-.main .article__text {
+.main .article__content-text {
   padding: 0 1rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .main .article__content {
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main .article {
+    margin: 0 64px;
+  }
 }
 .main .gallery {
   background-color: #FAFAFA;

@@ -73,9 +73,9 @@ footer p {
 
 
 .nav {
-
+    background-color: $primary1;
+    
     &-bar {
-        background-color: $primary1;
         color: $primary3;
         //sets display to flex, params: (justify-content, align-items, flex-direction) - null sets default behavior
         @include flex-box(center, center, column);
@@ -83,6 +83,10 @@ footer p {
         &__img {
             margin-top: $mobile-padding-btw-components;
             width: 120px;
+
+            @include tablet {
+                margin: 0 32px;
+            }
         }
 
         &__list {
@@ -96,10 +100,19 @@ footer p {
                 padding-bottom: $mobile-padding-btw-components;
                 width: 50%;
 
+                @include tablet {
+                    padding: 32px 0;
+                }
+
                 &--active {
                     border-bottom: .25rem solid $primary3;
                 }
             }
+        }
+
+        @include tablet {
+            flex-direction: row;
+            width: 50%;
         }
     }
 
@@ -150,14 +163,18 @@ footer p {
             }
 
             &--img {
-
                 @include tablet {
                     display: flex;
                     align-items: center;
                 }
             }
 
-
+            &--contact {
+                @include tablet {
+                    margin-right: 16px;
+                }
+                
+            }
         }
 
         &--social {
@@ -170,6 +187,7 @@ footer p {
 
         @include tablet {
             flex-direction: row;
+            margin: 0 16px;
         }
     }
 
@@ -181,19 +199,20 @@ footer p {
         @include tablet {
             order: -1;
         }
-
     }
 
     &__legal {
         padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
-    }
 
-    @include tablet {
         @include tablet {
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            width: 100%;
+           margin: 0 16px;
         }
     }
 
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }

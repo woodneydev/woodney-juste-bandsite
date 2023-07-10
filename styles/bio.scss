@@ -87,7 +87,7 @@
             @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
 
             @include tablet {
-                @include title-spacing($padding-before-headlines, $padding-between-components, $padding-after-headlines);
+                @include title-spacing($padding-before-headlines, $padding-between-components, 20px);
             }
         }
 

@@ -107,6 +107,10 @@ footer p {
                     border-bottom: .25rem solid $primary3;
                 }
             }
+
+            @include tablet {
+                align-items: center;
+            }
         }
 
         @include tablet {
@@ -205,6 +209,7 @@ footer p {
         
         @include tablet {
             order: -1;
+            margin-right: 20px;
         }
     }
 

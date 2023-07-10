@@ -136,6 +136,11 @@ footer p {
   border-bottom: 0.25rem solid #FFFFFF;
 }
 @media screen and (min-width: 768px) {
+  .nav-bar__list {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
   .nav-bar {
     flex-direction: row;
     width: 50%;
@@ -228,6 +233,7 @@ footer p {
 @media screen and (min-width: 768px) {
   .footer__img {
     order: -1;
+    margin-right: 20px;
   }
 }
 .footer__legal {
@@ -322,7 +328,7 @@ footer p {
 }
 @media screen and (min-width: 768px) {
   .main .gallery__title {
-    padding: 3rem 2.25rem 2.25rem;
+    padding: 3rem 2.25rem 20px;
   }
 }
 .main .gallery__collection {

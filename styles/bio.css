@@ -234,6 +234,11 @@ footer p {
   }
 }
 @media screen and (min-width: 768px) {
+  .footer .card__collection {
+    margin-right: 100px;
+  }
+}
+@media screen and (min-width: 768px) {
   .footer .card--social {
     order: -2;
     width: 430px;
@@ -278,13 +283,6 @@ footer p {
     flex-wrap: wrap;
   }
 }
-@media screen and (min-width: 1280px) {
-  .footer {
-    display: flex;
-    justify-content: center;
-  }
-}
-
 .main {
   background-color: #FFFFFF;
 }

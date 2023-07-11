@@ -205,6 +205,11 @@ footer p {
                 }
                 
             }
+
+            @include tablet {
+                margin-right: 100px;
+            }
+            
         }
 
         &--social {
@@ -252,7 +257,6 @@ footer p {
     }
 
     @include desktop {
-        display: flex;
-        justify-content: center;
+        
     }
 }

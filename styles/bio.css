@@ -113,6 +113,11 @@ footer p {
     margin: 0 2.25rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .nav-bar__img {
+    margin-left: 0;
+  }
+}
 .nav-bar__list {
   display: flex;
   justify-content: space-around;
@@ -130,6 +135,7 @@ footer p {
 @media screen and (min-width: 768px) {
   .nav-bar__list-item {
     padding: 32px 0;
+    width: 5rem;
   }
 }
 .nav-bar__list-item--active {
@@ -138,6 +144,11 @@ footer p {
 @media screen and (min-width: 768px) {
   .nav-bar__list {
     align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav-bar__list {
+    width: 300px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -150,7 +161,7 @@ footer p {
   background-image: url("../../assets/images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
-  height: 35vh;
+  height: 20vh;
   color: #FFFFFF;
 }
 .nav .hero__title {
@@ -167,9 +178,19 @@ footer p {
     padding-left: 2.25rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .nav .hero__title {
+    padding-left: 160px;
+  }
+}
 @media screen and (min-width: 768px) {
   .nav .hero {
-    height: 80vh;
+    height: 60vh;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav .hero {
+    height: 70vh;
   }
 }
 
@@ -236,6 +257,11 @@ footer p {
     margin-right: 20px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer__img {
+    padding-left: 100%;
+  }
+}
 .footer__legal {
   padding: 0 1rem 1rem;
 }
@@ -252,6 +278,12 @@ footer p {
     flex-wrap: wrap;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+  }
+}
 
 .main {
   background-color: #FFFFFF;
@@ -265,6 +297,11 @@ footer p {
     padding: 3rem 2.25rem 2.25rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .main .intro__title {
+    margin-left: 130px;
+  }
+}
 .main .intro__img {
   width: 100%;
   padding: 0 1rem 1rem;
@@ -275,6 +312,11 @@ footer p {
     margin-bottom: 2.25rem;
     display: flex;
     justify-content: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main .intro__img {
+    padding: 0 20%;
   }
 }
 .main .intro__quote {
@@ -296,6 +338,11 @@ footer p {
     font-weight: 600;
     color: #323232;
     padding-bottom: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main .intro__quote {
+    margin: 0 18%;
   }
 }
 .main .article__title {
@@ -320,6 +367,11 @@ footer p {
     margin: 0 64px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .main .article {
+    margin: 0 18%;
+  }
+}
 .main .gallery {
   background-color: #FAFAFA;
 }
@@ -329,6 +381,11 @@ footer p {
 @media screen and (min-width: 768px) {
   .main .gallery__title {
     padding: 3rem 2.25rem 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main .gallery__title {
+    margin: 0 80px;
   }
 }
 .main .gallery__collection {

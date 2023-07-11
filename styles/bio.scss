@@ -14,6 +14,10 @@
             @include tablet {
                 @include title-spacing($padding-before-headlines, $padding-between-components, $padding-after-headlines);
             }
+
+            @include desktop {
+                margin-left: 130px;
+            }
         }
 
         &__img {
@@ -30,6 +34,11 @@
                 justify-content: center;
 
             }
+
+            @include desktop {
+                padding: 0 20%
+            }
+
         }
 
         &__quote{
@@ -47,6 +56,10 @@
                     color: $primary1;
                     padding-bottom: 16px;
                 }
+            }
+
+            @include desktop {
+                margin: 0 18%;
             }
             
         }
@@ -78,6 +91,10 @@
             padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
             margin: 0 64px;
         }
+
+        @include desktop {
+            margin: 0 18%;
+        }
     }
 
     .gallery {
@@ -88,6 +105,10 @@
 
             @include tablet {
                 @include title-spacing($padding-before-headlines, $padding-between-components, 20px);
+            }
+
+            @include desktop {
+                margin: 0 80px;
             }
         }
 
@@ -122,6 +143,8 @@
             @include tablet {
                 @include flex-box(center, null, row);
             }
+
+            
         }
     }
 

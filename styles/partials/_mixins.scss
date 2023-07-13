@@ -81,7 +81,10 @@
 
 @mixin title-spacing($padding-bf-headlines, $padding-btw-compenents, $padding-af-headlines) {
     padding: $padding-bf-headlines $padding-btw-compenents $padding-af-headlines;
+}
 
+@mixin paragraph-spacing($left-right-pad, $bottom-pad) {
+    padding: 0 $left-right-pad $bottom-pad;
 }
 
 @mixin tablet {

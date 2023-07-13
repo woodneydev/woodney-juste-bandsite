@@ -34,24 +34,30 @@
 
 h1 {
     @include mobile-header;
+    @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
     @include tablet {
         @include page-header;
+        @include title-spacing($padding-before-headlines, $padding-between-components, $padding-after-headlines)
     }
 }
 
 h2 {
     @include mobile-section-header;
     color: $primary1;
+    @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
     @include tablet {
         @include section-header;
+        @include title-spacing($padding-before-headlines, $padding-between-components, $padding-after-headlines)
     }
 }
 
 h3 {
     @include mobile-subheader;
     color: $primary1;
+    @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
     @include tablet {
         @include subheader;
+        @include title-spacing($padding-before-headlines, $padding-between-components, $padding-after-headlines)
     }
 }
 
@@ -62,6 +68,13 @@ p {
     }
 }
 
+.paragraph {
+    @include paragraph-spacing($mobile-padding-btw-components, $mobile-padding-btw-components);
+    @include tablet {
+
+    }
+}
+
 footer p {
     @include mobile-footer-copy;
     color: $primary3;
@@ -69,7 +82,6 @@ footer p {
         @include footer-copy;
     }
 }
-
 
 .nav {
     background-color: $primary1;
@@ -174,10 +186,6 @@ footer p {
         &__title {
             color: $primary3;
             @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
-
-            @include tablet {
-                padding-right: 8px;
-            }
         }
 
         &__collection {
@@ -193,23 +201,14 @@ footer p {
             }
 
             &--img {
+
                 @include tablet {
                     display: flex;
                     align-items: center;
                 }
             }
 
-            &--contact {
-                @include tablet {
-                    margin-right: 16px;
-                }
-                
-            }
 
-            @include tablet {
-                margin-right: 100px;
-            }
-            
         }
 
         &--social {
@@ -222,7 +221,6 @@ footer p {
 
         @include tablet {
             flex-direction: row;
-            margin: 0 18px;
         }
     }
 
@@ -233,30 +231,19 @@ footer p {
         
         @include tablet {
             order: -1;
-            margin-right: 20px;
         }
 
-        @include desktop {
-                padding-left: 100%;
-        }
     }
 
     &__legal {
         padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
-
-        @include tablet {
-            width: 100%;
-           margin: 0 20px;
-        }
     }
 
-    @include tablet {
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    @include desktop {
+    // @include tablet {
+    //     flex-direction: row;
+    //     justify-content: space-between;
+    //     flex-wrap: wrap;
         
-    }
+    // }
+
 }

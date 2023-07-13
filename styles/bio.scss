@@ -9,10 +9,12 @@
         
         &__title {
             color: $primary1;
-            @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
+            // removed
+            // @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
 
             @include tablet {
-                @include title-spacing($padding-before-headlines, $padding-between-components, $padding-after-headlines);
+                // removed
+                // @include title-spacing($padding-before-headlines, $padding-between-components, $padding-after-headlines);
             }
 
             @include desktop {
@@ -43,10 +45,12 @@
 
         &__quote{
             @include mobile-subheader;
-            padding: 0 $mobile-padding-btw-components;
+            //removed
+            // padding: 0 $mobile-padding-btw-components;
             
             @include tablet {
-                padding: 0 $padding-between-components;
+                //removed
+                // padding: 0 $padding-between-components;
                 margin: 0 64px;
             }
 
@@ -54,7 +58,8 @@
                 @include tablet {
                     @include subheader;
                     color: $primary1;
-                    padding-bottom: 16px;
+                    //removed
+                    // padding-bottom: 16px;
                 }
             }
 
@@ -68,17 +73,20 @@
     .article {
 
         &__title {
-            @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
+            // removed
+            // @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
 
             @include tablet {
-                @include title-spacing($padding-before-headlines, $mobile-padding-btw-components, $padding-after-headlines);
+                // removed
+                // @include title-spacing($padding-before-headlines, $mobile-padding-btw-components, $padding-after-headlines);
 
             }
         }
 
         &__content {
             &-text {
-                padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
+                // removed
+                // padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
             }
 
             @include tablet {

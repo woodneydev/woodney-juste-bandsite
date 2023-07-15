@@ -47,7 +47,10 @@
     }
 
     .article {
-
+        @include tablet {
+            margin: 0 80px;
+        }
+        
         &__title {
             @include tablet {
                 padding-left: 16px;
@@ -66,9 +69,7 @@
             }
         }
 
-        @include tablet {
-            margin: 0 80px;
-        }
+
     }
 
     .gallery {
@@ -84,18 +85,22 @@
                 margin: 0 80px;
             }
         }
-
+        
         &__collection {
             @include flex-box(null, null, column);
             flex-wrap: wrap;
             width: 100%;
-
+            
+            @include tablet {
+                @include flex-box(null, null, row);
+                padding: 0 36px;
+            }
             &-img {
                 width: 100%;
                 padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
                 
                 @include tablet {
-                    width: 30%;
+                    width: 32%;
                     padding: 8px;
                 }
 
@@ -110,10 +115,6 @@
                         padding-right: 0;
                     }
                 }
-            }
-
-            @include tablet {
-                @include flex-box(center, null, row);
             }
         }
     }

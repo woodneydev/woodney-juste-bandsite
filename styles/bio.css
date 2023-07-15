@@ -317,6 +317,11 @@ footer p {
   padding-bottom: 0;
 }
 @media screen and (min-width: 768px) {
+  .main .article {
+    margin: 0 80px;
+  }
+}
+@media screen and (min-width: 768px) {
   .main .article__title {
     padding-left: 16px;
   }
@@ -329,11 +334,6 @@ footer p {
 @media screen and (min-width: 768px) {
   .main .article__content-text {
     padding-bottom: 2.25rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .main .article {
-    margin: 0 80px;
   }
 }
 .main .gallery {
@@ -355,13 +355,20 @@ footer p {
   flex-wrap: wrap;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .main .gallery__collection {
+    display: flex;
+    flex-direction: row;
+    padding: 0 36px;
+  }
+}
 .main .gallery__collection-img {
   width: 100%;
   padding: 0 1rem 1rem;
 }
 @media screen and (min-width: 768px) {
   .main .gallery__collection-img {
-    width: 30%;
+    width: 32%;
     padding: 8px;
   }
 }
@@ -373,12 +380,5 @@ footer p {
 @media screen and (min-width: 768px) {
   .main .gallery__collection-img--right {
     padding-right: 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .main .gallery__collection {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
   }
 }/*# sourceMappingURL=bio.css.map */

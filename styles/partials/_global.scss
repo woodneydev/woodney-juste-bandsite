@@ -117,7 +117,8 @@ footer p {
 
                 @include tablet {
                     padding: 32px 0;
-                    width: 5rem;
+                    margin-right: $padding-between-components;
+                    width: auto;
                 }
 
                 &--active {
@@ -127,17 +128,17 @@ footer p {
 
             @include tablet {
                 align-items: center;
+                width: initial;
             }
 
             @include desktop {
                 // padding: 32px 0;
-                width: 300px;
+                // width: 300px;
             }
         }
 
         @include tablet {
-            flex-direction: row;
-            width: 50%;
+            @include flex-box (flex-start, null, row)
         }
 
     }

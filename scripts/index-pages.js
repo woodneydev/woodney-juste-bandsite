@@ -33,7 +33,7 @@ const handleSubmit = event => {
     const name = event.target.name.value;
     const comment = event.target.comment.value;
 
-    commentsArray.push({name, comment, date});
+    commentsArray.push({name, comment});
     loadComments();
 }
 

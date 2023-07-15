@@ -144,7 +144,8 @@ footer p {
 @media screen and (min-width: 768px) {
   .nav-bar__list-item {
     padding: 32px 0;
-    width: 5rem;
+    margin-right: 2.25rem;
+    width: auto;
   }
 }
 .nav-bar__list-item--active {
@@ -153,17 +154,14 @@ footer p {
 @media screen and (min-width: 768px) {
   .nav-bar__list {
     align-items: center;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .nav-bar__list {
-    width: 300px;
+    width: initial;
   }
 }
 @media screen and (min-width: 768px) {
   .nav-bar {
+    display: flex;
+    justify-content: flex-start;
     flex-direction: row;
-    width: 50%;
   }
 }
 .nav .hero {
@@ -292,8 +290,7 @@ footer p {
 }
 @media screen and (min-width: 768px) {
   .main .intro__img {
-    padding: 0 13%;
-    margin-bottom: 2.25rem;
+    padding: 0 80px 2.25rem;
     display: flex;
     justify-content: center;
   }

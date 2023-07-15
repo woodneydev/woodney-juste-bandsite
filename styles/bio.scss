@@ -9,13 +9,6 @@
         
         &__title {
             color: $primary1;
-            // removed
-            // @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
-
-            @include tablet {
-                // removed
-                // @include title-spacing($padding-before-headlines, $padding-between-components, $padding-after-headlines);
-            }
 
             @include desktop {
                 margin-left: 130px;
@@ -29,9 +22,7 @@
             @include tablet {
                 // padding: 0 32px
                 // padding: 0 $padding-between-components $padding-between-components;
-
-                padding: 0 13%;
-                margin-bottom: $padding-between-components;
+                padding: 0 80px $padding-between-components;
                 display: flex;
                 justify-content: center;
 

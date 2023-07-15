@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Band Site</title>
-    <link rel="stylesheet" href="./styles/bio.css" >
+    <link rel="stylesheet" href="./styles/bio.css">
+    <script defer src="./scripts/index-pages.js"></script>
 </head>
 
 <body>
@@ -18,14 +19,16 @@
             </ul>
         </nav>
         <section class="hero">
-          <h1 class="hero__title">The Bees Knees</h1>  
+            <h1 class="hero__title">The Bees Knees</h1>
         </section>
     </header>
     <main class="main">
         <section class="intro">
             <h2 class="intro__title">About the Musicians</h2>
-            <img class="intro__img" src="./assets/images/band.jpg" alt="Indoor concert, musicians performing on stage with a crowd in front of them.">
-            <p class="intro__quote intro__quote--large paragraph">"We push each other to be the best. It's not uncommon for one of us to say 'this needs to be better, back
+            <img class="intro__img" src="./assets/images/band.jpg"
+                alt="Indoor concert, musicians performing on stage with a crowd in front of them.">
+            <p class="intro__quote intro__quote--large paragraph">"We push each other to be the best. It's not uncommon
+                for one of us to say 'this needs to be better, back
                 to the drawing board'"
             </p>
             <p class="intro__quote paragraph">- Bryan Teddy, lead vocalist of The Bees Knees</p>
@@ -41,7 +44,7 @@
                     from manager Cam Adams. Having worked with other popular
                     acts (The Elephant In The Room, One Trick Pony, The Cat's
                     Meow), Adams was confident the band could succeed even
-                    further, pushing them to sign with Magenta Records. 
+                    further, pushing them to sign with Magenta Records.
                 </p>
                 <p class="article__content-text paragraph">From there, the band has soared, gaining international
                     recognition and ranking in the top 10 on the Poster Charts. New
@@ -58,77 +61,99 @@
         <section class="gallery">
             <h2 class="gallery__title">Photo Gallery</h2>
             <div class="gallery__collection">
-                <img src="./assets/images/Photo-gallery-1.jpg" alt="" class="gallery__collection-img gallery__collection-img--left">
+                <img src="./assets/images/Photo-gallery-1.jpg" alt=""
+                    class="gallery__collection-img gallery__collection-img--left">
                 <img src="./assets/images/Photo-gallery-2.jpg" alt="" class="gallery__collection-img">
-                <img src="./assets/images/Photo-gallery-3.jpg" alt="" class="gallery__collection-img gallery__collection-img--right">
-                <img src="./assets/images/Photo-gallery-4.jpg" alt="" class="gallery__collection-img gallery__collection-img--left">
+                <img src="./assets/images/Photo-gallery-3.jpg" alt=""
+                    class="gallery__collection-img gallery__collection-img--right">
+                <img src="./assets/images/Photo-gallery-4.jpg" alt=""
+                    class="gallery__collection-img gallery__collection-img--left">
                 <img src="./assets/images/Photo-gallery-5.jpg" alt="" class="gallery__collection-img">
-                <img src="./assets/images/Photo-gallery-6.jpg" alt="" class="gallery__collection-img gallery__collection-img--right">
-                <img src="./assets/images/Photo-gallery-7.jpg" alt="" class="gallery__collection-img gallery__collection-img--left">
+                <img src="./assets/images/Photo-gallery-6.jpg" alt=""
+                    class="gallery__collection-img gallery__collection-img--right">
+                <img src="./assets/images/Photo-gallery-7.jpg" alt=""
+                    class="gallery__collection-img gallery__collection-img--left">
                 <img src="./assets/images/Photo-gallery-8.jpg" alt="" class="gallery__collection-img">
-                <img src="./assets/images/Photo-gallery-9.jpg" alt="" class="gallery__collection-img gallery__collection-img--right">
+                <img src="./assets/images/Photo-gallery-9.jpg" alt=""
+                    class="gallery__collection-img gallery__collection-img--right">
             </div>
         </section>
-    </main>
-    <footer class="footer">
-        <section class="card card--social">
-            <h2 class="card__title">Get in Touch</h2>
-            <div class="card__collection card__collection--img">
-                <img src="./assets/icons/Icon-instagram.svg" class="card__collection-img">
-                <img src="./assets/icons/Icon-facebook.svg" class="card__collection-img">
-                <img src="./assets/icons/Icon-twitter.svg" class="card__collection-img">
+        <section class="comment">
+            <h2 class="comment__title">Join the Conversation</h2>
+            <form class="comment__form">
+                <label class="comment__form-label">
+                    <input type="text" name="name" placeholder="Enter your name" class="comment__form-label-text">
+                </label>
+                <label class="comment__form-label">
+                    <textarea name="comment" class="comment__form-label-textarea">Add a new comment</textarea>
+                </label>
+                <button class="comment__form-button" type="submit">Submit</button>
+            </form>
+            <div class="comments">
+                
             </div>
         </section>
-        
-        <section class="card">
-            <div class="card__collection card__collection--contact">
-                <div class="card__collection-group card__collection-group--who">
-                    <p>Cam Adams</p>
-                    <p>The Bees Knees Management</p>
+        <footer class="footer">
+            <section class="card card--social">
+                <h2 class="card__title">Get in Touch</h2>
+                <div class="card__collection card__collection--img">
+                    <img src="./assets/icons/Icon-instagram.svg" class="card__collection-img">
+                    <img src="./assets/icons/Icon-facebook.svg" class="card__collection-img">
+                    <img src="./assets/icons/Icon-twitter.svg" class="card__collection-img">
                 </div>
-                <div class="card__collection-group card__collection-group--where">
-                    <p>503 Broadway Penthouse,</p>
-                    <p>New York, NY 10012, USA</p>
-                </div>
-                <div class="card__collection-group card__collection-group--how">
-                    <p>info@thebeeskness.com</p>
-                </div>
-            </div>
+                <img class="card__logo" src="./assets/logo/Logo-bandsite.svg">
+            </section>
 
-            <div class="card__collection card__collection--contact">
-                <div class="card__collection-group card__collection-group--who">
-                    <p>Pearl Gregg</p>
-                    <p>Limitless Artist Group</p>
+            <section class="card">
+                <div class="card__collection card__collection--contact">
+                    <div class="card__collection-group card__collection-group--who">
+                        <p>Cam Adams</p>
+                        <p>The Bees Knees Management</p>
+                    </div>
+                    <div class="card__collection-group card__collection-group--where">
+                        <p>503 Broadway Penthouse,</p>
+                        <p>New York, NY 10012, USA</p>
+                    </div>
+                    <div class="card__collection-group card__collection-group--how">
+                        <p>info@thebeeskness.com</p>
+                    </div>
                 </div>
-                <div class="card__collection-group card__collection-group--where">
-                    <p>Booking Agent for</p>
-                    <p>US / South America / Japan</p>
-                </div>
-                <div class="card__collection-group card__collection-group--how">
-                    <p>pearl.gregg@limitlessag.com</p>
-                </div>
-            </div>
 
-            <div class="card__collection card__collection--contact">
-                <div class="card__collection-group card__collection-group--who">
-                    <p>Carson Whyte</p>
-                    <p>ARCH Entertainment</p>
+                <div class="card__collection card__collection--contact">
+                    <div class="card__collection-group card__collection-group--who">
+                        <p>Pearl Gregg</p>
+                        <p>Limitless Artist Group</p>
+                    </div>
+                    <div class="card__collection-group card__collection-group--where">
+                        <p>Booking Agent for</p>
+                        <p>US / South America / Japan</p>
+                    </div>
+                    <div class="card__collection-group card__collection-group--how">
+                        <p>pearl.gregg@limitlessag.com</p>
+                    </div>
                 </div>
-                <div class="card__collection-group card__collection-group--where">
-                    <p>Booking Agent for</p>
-                    <p>UK / EU / AU</p>
-                </div>
-                <div class="card__collection-group card__collection-group--how">
-                    <p>cwhyte@archentertainment.com</p>
-                </div>
-            </div>
-        </section>
 
-        <img src="./assets/logo/Logo-bandsite.svg" class="footer__img">
+                <div class="card__collection card__collection--contact">
+                    <div class="card__collection-group card__collection-group--who">
+                        <p>Carson Whyte</p>
+                        <p>ARCH Entertainment</p>
+                    </div>
+                    <div class="card__collection-group card__collection-group--where">
+                        <p>Booking Agent for</p>
+                        <p>UK / EU / AU</p>
+                    </div>
+                    <div class="card__collection-group card__collection-group--how">
+                        <p>cwhyte@archentertainment.com</p>
+                    </div>
+                </div>
+            </section>
 
-        <p class="footer__legal">Copyright The Bees Knees © 2021 All Rights Reserved</p>
-        </section>
-    </footer>
+            <img src="./assets/logo/Logo-bandsite.svg" class="footer__img">
+
+            <p class="footer__legal">Copyright The Bees Knees © 2021 All Rights Reserved</p>
+            </section>
+        </footer>
 </body>
 
 </html>
+</main>

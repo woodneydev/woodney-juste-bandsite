@@ -185,7 +185,12 @@ footer p {
 
         &__title {
             color: $primary3;
+            width: 500px;
             @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
+
+            @include tablet {
+                flex: 0 0 auto;
+            }
         }
 
         &__collection {
@@ -205,16 +210,26 @@ footer p {
                 @include tablet {
                     display: flex;
                     align-items: center;
+                    flex: 0 0 auto;
                 }
             }
 
+        }
 
+        &__logo {
+            width: 150px;
+            display: none;
+
+            @include tablet {
+                display: flex;
+                margin-left: auto;
+            }
         }
 
         &--social {
             @include tablet {
-                order: -2;
-                width: 430px;
+                display: flex;
+                width: 535px;
                 align-items: baseline;
             }
         }
@@ -230,7 +245,7 @@ footer p {
         width: 7.5rem;
         
         @include tablet {
-            order: -1;
+            display: none;
         }
 
     }
@@ -238,12 +253,5 @@ footer p {
     &__legal {
         padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
     }
-
-    // @include tablet {
-    //     flex-direction: row;
-    //     justify-content: space-between;
-    //     flex-wrap: wrap;
-        
-    // }
 
 }

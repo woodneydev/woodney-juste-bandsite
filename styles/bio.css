@@ -290,14 +290,9 @@ footer p {
 }
 @media screen and (min-width: 768px) {
   .main .intro__img {
-    padding: 0 80px 2.25rem;
+    padding: 0 96px 2.25rem;
     display: flex;
     justify-content: center;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .main .intro__img {
-    padding: 0 20%;
   }
 }
 .main .intro__quote {
@@ -307,7 +302,7 @@ footer p {
 }
 @media screen and (min-width: 768px) {
   .main .intro__quote {
-    margin: 0 64px;
+    padding: 0 96px 1rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -318,9 +313,12 @@ footer p {
     color: #323232;
   }
 }
-@media screen and (min-width: 1280px) {
-  .main .intro__quote {
-    margin: 0 18%;
+.main .intro__quote--last {
+  padding-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .main .article__title {
+    padding-left: 16px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -329,21 +327,17 @@ footer p {
   }
 }
 @media screen and (min-width: 768px) {
-  .main .article {
-    padding: 0 1rem 1rem;
-    margin: 0 64px;
+  .main .article__content-text {
+    padding-bottom: 2.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .main .article {
-    margin: 0 18%;
+    margin: 0 80px;
   }
 }
 .main .gallery {
   background-color: #FAFAFA;
-}
-.main .gallery__title {
-  padding: 1.5rem 1rem 1rem;
 }
 @media screen and (min-width: 768px) {
   .main .gallery__title {
@@ -368,7 +362,7 @@ footer p {
 @media screen and (min-width: 768px) {
   .main .gallery__collection-img {
     width: 30%;
-    padding: 1rem;
+    padding: 8px;
   }
 }
 @media screen and (min-width: 768px) {

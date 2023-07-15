@@ -20,79 +20,54 @@
             padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
 
             @include tablet {
-                // padding: 0 32px
-                // padding: 0 $padding-between-components $padding-between-components;
-                padding: 0 80px $padding-between-components;
+                padding: 0 96px $padding-between-components;
                 display: flex;
                 justify-content: center;
-
             }
-
-            @include desktop {
-                padding: 0 20%
-            }
-
         }
 
         &__quote{
             @include mobile-subheader;
-            //removed
-            // padding: 0 $mobile-padding-btw-components;
             
             @include tablet {
-                //removed
-                // padding: 0 $padding-between-components;
-                margin: 0 64px;
+                padding: 0 96px $mobile-padding-btw-components;
             }
 
             &--large {
                 @include tablet {
                     @include subheader;
                     color: $primary1;
-                    //removed
-                    // padding-bottom: 16px;
                 }
             }
 
-            @include desktop {
-                margin: 0 18%;
+            &--last {
+                padding-bottom: 0
             }
-            
         }
     }
 
     .article {
 
         &__title {
-            // removed
-            // @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
-
             @include tablet {
-                // removed
-                // @include title-spacing($padding-before-headlines, $mobile-padding-btw-components, $padding-after-headlines);
-
+                padding-left: 16px;
             }
         }
 
         &__content {
-            &-text {
-                // removed
-                // padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
-            }
-
             @include tablet {
                 display: flex;
             }
-        }
 
+            &-text{
+                @include tablet {
+                    padding-bottom: $padding-between-components;
+                }
+            }
+        }
 
         @include tablet {
-            padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
-            margin: 0 64px;
-        }
-
-        @include desktop {
-            margin: 0 18%;
+            margin: 0 80px;
         }
     }
 
@@ -100,7 +75,6 @@
         background-color: $seconday3;
 
         &__title {
-            @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
 
             @include tablet {
                 @include title-spacing($padding-before-headlines, $padding-between-components, 20px);
@@ -122,7 +96,7 @@
                 
                 @include tablet {
                     width: 30%;
-                    padding: 1rem;
+                    padding: 8px;
                 }
 
                 &--left {
@@ -136,14 +110,11 @@
                         padding-right: 0;
                     }
                 }
-
             }
 
             @include tablet {
                 @include flex-box(center, null, row);
             }
-
         }
     }
-
 }

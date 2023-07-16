@@ -203,6 +203,7 @@ footer p {
 
 .footer {
   background-color: #323232;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -212,20 +213,30 @@ footer p {
 }
 .footer .card__title {
   color: #FFFFFF;
-  width: 500px;
+  width: auto;
   padding: 1.5rem 1rem 1rem;
 }
 @media screen and (min-width: 768px) {
   .footer .card__title {
     flex: 0 0 auto;
+    padding: 3rem 2.25rem 2.25rem;
+    padding-right: 10.85px;
   }
 }
 .footer .card__collection {
   padding: 0 1rem 1rem;
 }
+@media screen and (min-width: 768px) {
+  .footer .card__collection {
+    padding: 0 2.25rem 2.25rem;
+  }
+}
 .footer .card__collection-img {
   height: 1.5rem;
   margin-right: 1.5rem;
+}
+.footer .card__collection--middle {
+  padding: 0 16px;
 }
 .footer .card__collection-group {
   padding-bottom: 1rem;
@@ -234,7 +245,7 @@ footer p {
   .footer .card__collection--img {
     display: flex;
     align-items: center;
-    flex: 0 0 auto;
+    padding-left: 16px;
   }
 }
 .footer .card__logo {
@@ -271,6 +282,11 @@ footer p {
 }
 .footer__legal {
   padding: 0 1rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__legal {
+    padding: 0 2.25rem 2.25rem;
+  }
 }
 
 .main {
@@ -368,7 +384,7 @@ footer p {
 }
 @media screen and (min-width: 768px) {
   .main .gallery__collection-img {
-    width: 32%;
+    width: 33.3%;
     padding: 8px;
   }
 }

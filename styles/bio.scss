@@ -116,4 +116,117 @@
             }
         }
     }
+
+    .comment-area {
+        
+        .comments {
+            display: flex;
+
+            &__img {
+                width: 40px;
+                height: 40px;
+                background-image: url(../assets/images/Mohan-muruge.jpg);
+                background-position: center;
+                background-size: cover;
+                border-radius: 50%;
+                margin-top: $mobile-padding-btw-components;
+                margin-right: $mobile-padding-btw-components;
+                margin-left: $mobile-padding-btw-components;
+                flex-shrink: 0;
+            }
+
+            &__form {
+                display: flex;
+                width: 100%;
+                margin-right: $mobile-padding-btw-components;
+                flex-direction: column;
+
+                &-label {
+                    display: flex;
+                    flex-direction: column;
+
+                    &-text {
+                        height: 40px;
+                        border: 1px solid $seconday2;
+                        background-color: $seconday3;
+                        border-radius: 5px;
+                        margin-bottom: $mobile-padding-btw-components;
+
+                        &::placeholder {
+                            padding-left: $mobile-padding-btw-components;
+                            color: black;
+                        }
+                    }
+                    
+                    &-textarea {
+                        height: 80px;
+                        border: 1px solid $seconday2;
+                        background-color: $seconday3;
+                        border-radius: #000;
+
+                        &::placeholder {
+                            padding-top: 10px;
+                            padding-left: $mobile-padding-btw-components;
+                            color: #000;
+                        }
+                    }
+                }
+
+                &-button {
+                    border: none;
+                    border-radius: 5px;
+                    margin-top: $mobile-padding-btw-components;
+                    height: 40px;
+                    color: $primary3;
+                    background-color: $primary1;
+                }
+            }
+        }
+
+        .comment__dom {
+
+            .comment {
+                display: flex;
+                padding-top: $mobile-padding-btw-components;
+                padding-bottom: $mobile-padding-btw-components;
+                margin: 16px;
+                margin: 16px;
+                border-top: 2px solid $seconday2;
+                
+                margin-top: $mobile-padding-btw-components;
+                margin-bottom: $mobile-padding-btw-components;
+                
+                &:last-child {
+                    border-bottom: 2px solid $seconday2;
+                }
+                
+                &__img {
+                    width: 40px;
+                    height: 40px;
+                    background-color: $seconday2;
+                    border-radius: 50%;
+                    flex-shrink: 0;
+                    margin-right: $mobile-padding-btw-components;
+                }
+
+                &__section {
+                    width: 100%;
+                    &-details {
+                        display: flex;
+                        justify-content: space-between;
+                        padding-bottom: 5px;
+
+                        &-name {
+                            font-weight: bold;
+                            color: $primary1;
+                        }
+
+                        &-date {
+                            color: $primary2;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

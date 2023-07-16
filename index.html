@@ -78,26 +78,31 @@
                     class="gallery__collection-img gallery__collection-img--right">
             </div>
         </section>
-        <section class="comment">
-            <h2 class="comment__title">Join the Conversation</h2>
-            <form class="comment__form">
-                <label class="comment__form-label">
-                    <input type="text" name="name" placeholder="Enter your name" class="comment__form-label-text">
-                </label>
-                <label class="comment__form-label">
-                    <textarea name="comment" class="comment__form-label-textarea">Add a new comment</textarea>
-                </label>
-                <button class="comment__form-button" type="submit">Submit</button>
-            </form>
+        <section class="comment-area">
+            <h2 class="comment-area__title">Join the Conversation</h2>
+            <div class="comments">
+                <div class="comments__img"></div>
+                <form class="comments__form">
+                    <label class="comments__form-label">
+                        NAME
+                        <input type="text" name="name" placeholder="Enter your name" class="comments__form-label-text">
+                    </label>
+                    <label class="comments__form-label">
+                        COMMENT
+                        <textarea name="comment" class="comments__form-label-textarea" placeholder="Add a new comment"></textarea>
+                    </label>
+                    <button class="comments__form-button" type="submit">Comment</button>
+                </form>
+            </div>
             <div class="comment__dom">
-                <img class="comments__img">
-                <div class="comments__section">
-                    <div class="comments__section-details">
-                        <p class="comments__section-details-name"></p>
-                        <p class="comments__section-details-date"></p>
+                <!-- <img class="comment__img">
+                <div class="comment__section">
+                    <div class="comment__section-details">
+                        <p class="comment__section-details-name"></p>
+                        <p class="comment__section-details-date"></p>
                     </div>
-                    <p class="comments__section-post"> </p>
-                </div>
+                    <p class="comment__section-post"> </p>
+                </div> -->
             </div>
         </section>
         <footer class="footer">

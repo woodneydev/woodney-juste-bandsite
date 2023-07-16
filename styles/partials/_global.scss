@@ -87,6 +87,16 @@ footer p {
     }
 }
 
+label {
+    @include mobile-label;
+    color: $primary2;
+
+    @include tablet {
+        @include labels;
+    }
+}
+
+
 .nav {
     background-color: $primary1;
 

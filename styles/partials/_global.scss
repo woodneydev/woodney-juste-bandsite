@@ -96,6 +96,10 @@ label {
     }
 }
 
+a, a:visited {
+    text-decoration: none;
+}
+
 
 .nav {
     background-color: $primary1;
@@ -129,14 +133,22 @@ label {
                 padding-bottom: $mobile-padding-btw-components;
                 width: 50%;
 
-                @include tablet {
-                    padding: 32px 0;
-                    margin-right: $padding-between-components;
-                    width: auto;
+                &-link {
+                    color: $primary3;
+                }
+                
+                &:hover {
+                    border-bottom: .25rem solid $primary3;
                 }
 
                 &--active {
                     border-bottom: .25rem solid $primary3;
+                }
+
+                @include tablet {
+                    padding: 32px 0;
+                    margin-right: $padding-between-components;
+                    width: auto;
                 }
             }
 

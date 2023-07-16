@@ -1,0 +1,20 @@
+@use "partials/global" as *;
+@use "partials/variables" as *;
+@use "partials/mixins" as *;
+
+
+.nav {
+    .hero {
+        &__title {
+            align-items: flex-start;
+            flex-direction: column;
+            &-small {
+                color: white;
+                padding-bottom: 0;
+            }
+            &-large {
+                width: 280px;
+            }
+        }
+    }
+}

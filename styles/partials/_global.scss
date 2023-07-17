@@ -148,12 +148,11 @@ a, a:visited {
                 @include tablet {
                     padding: 32px 0;
                     margin-right: $padding-between-components;
-                    width: auto;
                 }
             }
 
             @include tablet {
-                align-items: center;
+                align-items: baseline;
                 width: initial;
             }
 
@@ -260,16 +259,19 @@ a, a:visited {
             display: none;
 
             @include tablet {
-                display: flex;
+                display: block;
                 margin-left: auto;
+                padding-right: $padding-between-components;
+    
             }
         }
 
         &--social {
             @include tablet {
                 display: flex;
-                width: 535px;
+                width: 100%;
                 align-items: baseline;
+                justify-content: space-between;
             }
         }
 

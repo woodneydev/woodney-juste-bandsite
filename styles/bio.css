@@ -172,12 +172,11 @@ a, a:visited {
   .nav-bar__list-item {
     padding: 32px 0;
     margin-right: 2.25rem;
-    width: auto;
   }
 }
 @media screen and (min-width: 768px) {
   .nav-bar__list {
-    align-items: center;
+    align-items: baseline;
     width: initial;
   }
 }
@@ -278,15 +277,17 @@ a, a:visited {
 }
 @media screen and (min-width: 768px) {
   .footer .card__logo {
-    display: flex;
+    display: block;
     margin-left: auto;
+    padding-right: 2.25rem;
   }
 }
 @media screen and (min-width: 768px) {
   .footer .card--social {
     display: flex;
-    width: 535px;
+    width: 100%;
     align-items: baseline;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 768px) {
@@ -399,7 +400,7 @@ a, a:visited {
   .main .gallery__collection {
     display: flex;
     flex-direction: row;
-    padding: 0 36px;
+    padding: 0 36px 16px;
   }
 }
 .main .gallery__collection-img {
@@ -424,6 +425,7 @@ a, a:visited {
 }
 .main .comment-area .comments {
   display: flex;
+  padding: 0 1rem;
 }
 .main .comment-area .comments__img {
   width: 40px;
@@ -432,15 +434,12 @@ a, a:visited {
   background-position: center;
   background-size: cover;
   border-radius: 50%;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
+  margin: 1rem 1rem 0 0;
   flex-shrink: 0;
 }
 .main .comment-area .comments__form {
   display: flex;
   width: 100%;
-  margin-right: 1rem;
   flex-direction: column;
 }
 .main .comment-area .comments__form-label {
@@ -486,12 +485,28 @@ a, a:visited {
   background-color: #323232;
   margin-top: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .main .comment-area .comments__form-button {
+    width: 150px;
+    align-self: flex-end;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main .comment-area .comments {
+    padding: 0 96px;
+  }
+}
+.main .comment-area .comment__dom {
+  padding: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .main .comment-area .comment__dom {
+    padding: 0 96px;
+  }
+}
 .main .comment-area .comment__dom .comment {
   display: flex;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin: 16px;
-  margin: 16px;
+  padding: 1rem 0;
   border-top: 2px solid #E1E1E1;
   margin-top: 1rem;
   margin-bottom: 1rem;

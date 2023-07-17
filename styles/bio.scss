@@ -91,7 +91,7 @@
             
             @include tablet {
                 @include flex-box(null, null, row);
-                padding: 0 36px;
+                padding: 0 36px 16px;
             }
             &-img {
                 width: 100%;
@@ -119,8 +119,10 @@
 
     .comment-area {
         
+        
         .comments {
             display: flex;
+            padding: 0 $mobile-padding-btw-components;
 
             &__img {
                 width: 40px;
@@ -129,16 +131,16 @@
                 background-position: center;
                 background-size: cover;
                 border-radius: 50%;
-                margin-top: $mobile-padding-btw-components;
-                margin-right: $mobile-padding-btw-components;
-                margin-left: $mobile-padding-btw-components;
+                margin: $mobile-padding-btw-components $mobile-padding-btw-components 0 0; ;
                 flex-shrink: 0;
+
+
             }
 
             &__form {
                 display: flex;
                 width: 100%;
-                margin-right: $mobile-padding-btw-components;
+                // margin-right: $mobile-padding-btw-components;
                 flex-direction: column;
 
                 &-label {
@@ -175,18 +177,33 @@
                 &-button {
                     @include button;
                     margin-top: $mobile-padding-btw-components;
+
+                    @include tablet {
+                        width: 150px;
+                        align-self: flex-end;
+                    }
                 }
+                
+            }
+
+            @include tablet {
+                padding: 0 96px;
             }
         }
 
         .comment__dom {
+            padding: 0 $mobile-padding-btw-components;
+
+            @include tablet {
+                padding: 0 96px;
+            }
 
             .comment {
                 display: flex;
-                padding-top: $mobile-padding-btw-components;
-                padding-bottom: $mobile-padding-btw-components;
-                margin: 16px;
-                margin: 16px;
+                // padding-top: $mobile-padding-btw-components;
+                // padding-bottom: $mobile-padding-btw-components;
+                padding: $mobile-padding-btw-components 0;
+                // margin: 0 16px;
                 border-top: 2px solid $seconday2;
                 
                 margin-top: $mobile-padding-btw-components;

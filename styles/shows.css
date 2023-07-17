@@ -172,12 +172,11 @@ a, a:visited {
   .nav-bar__list-item {
     padding: 32px 0;
     margin-right: 2.25rem;
-    width: auto;
   }
 }
 @media screen and (min-width: 768px) {
   .nav-bar__list {
-    align-items: center;
+    align-items: baseline;
     width: initial;
   }
 }
@@ -278,15 +277,17 @@ a, a:visited {
 }
 @media screen and (min-width: 768px) {
   .footer .card__logo {
-    display: flex;
+    display: block;
     margin-left: auto;
+    padding-right: 2.25rem;
   }
 }
 @media screen and (min-width: 768px) {
   .footer .card--social {
     display: flex;
-    width: 535px;
+    width: 100%;
     align-items: baseline;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 768px) {

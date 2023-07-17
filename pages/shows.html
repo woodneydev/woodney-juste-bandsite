@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shows</title>
     <link href="../styles/shows.css" rel="stylesheet" />
-    <script defer src="../scripts/index-pages.js"></script>
+    <script defer src="../scripts/build-shows-page.js"></script>
 </head>
 
 <body>
@@ -14,10 +14,10 @@
         <nav class="nav-bar">
             <img class="nav-bar__img" src="../assets/logo/Logo-bandsite.svg" alt="Bandsite logo" />
             <ul class="nav-bar__list">
-                <li class="nav-bar__list-item nav-bar__list-item--active">
+                <li class="nav-bar__list-item">
                     <a class="nav-bar__list-item-link" href="../index.html">Biography</a>
                 </li>
-                <li class="nav-bar__list-item">
+                <li class="nav-bar__list-item nav-bar__list-item--active" >
                     <a class="nav-bar__list-item-link" href="./shows.html">Shows</a>
                 </li>
             </ul>
@@ -40,7 +40,7 @@
         </section>
     </header>
     <main class="shows-section">
-        <h1 class="shows-section__title">Shows</h1>
+        <!-- <h1 class="shows-section__title">Shows</h1>
         
         <table class="shows">
             <tr class="shows__head">
@@ -54,9 +54,69 @@
                 <td class="shows__row-item">San Francisco, CA</td>
                 <td class="shows__row-item"><button class="shows__row-item-btn">BUY TICKETS</button></td>
             </tr>
-        </table>
-
+        </table> -->
+        
     </main>
+    <footer class="footer">
+        <section class="card card--social">
+            <h2 class="card__title">Get in Touch</h2>
+            <div class="card__collection card__collection--img">
+                <img src="../assets/icons/Icon-instagram.svg" class="card__collection-img">
+                <img src="../assets/icons/Icon-facebook.svg" class="card__collection-img">
+                <img src="../assets/icons/Icon-twitter.svg" class="card__collection-img">
+            </div>
+            <img class="card__logo" src="../assets/logo/Logo-bandsite.svg">
+        </section>
+
+        <section class="card">
+            <div class="card__collection card__collection--contact">
+                <div class="card__collection-group card__collection-group--who">
+                    <p>Cam Adams</p>
+                    <p>The Bees Knees Management</p>
+                </div>
+                <div class="card__collection-group card__collection-group--where">
+                    <p>503 Broadway Penthouse,</p>
+                    <p>New York, NY 10012, USA</p>
+                </div>
+                <div class="card__collection-group card__collection-group--how">
+                    <p>info@thebeeskness.com</p>
+                </div>
+            </div>
+
+            <div class="card__collection card__collection--middle">
+                <div class="card__collection-group card__collection-group--who">
+                    <p>Pearl Gregg</p>
+                    <p>Limitless Artist Group</p>
+                </div>
+                <div class="card__collection-group card__collection-group--where">
+                    <p>Booking Agent for</p>
+                    <p>US / South America / Japan</p>
+                </div>
+                <div class="card__collection-group card__collection-group--how">
+                    <p>pearl.gregg@limitlessag.com</p>
+                </div>
+            </div>
+
+            <div class="card__collection card__collection--contact">
+                <div class="card__collection-group card__collection-group--who">
+                    <p>Carson Whyte</p>
+                    <p>ARCH Entertainment</p>
+                </div>
+                <div class="card__collection-group card__collection-group--where">
+                    <p>Booking Agent for</p>
+                    <p>UK / EU / AU</p>
+                </div>
+                <div class="card__collection-group card__collection-group--how">
+                    <p>cwhyte@archentertainment.com</p>
+                </div>
+            </div>
+        </section>
+
+        <img src="../assets/logo/Logo-bandsite.svg" class="footer__img">
+
+        <p class="footer__legal">Copyright The Bees Knees © 2021 All Rights Reserved</p>
+        </section>
+    </footer>
 </body>
 
 </html>

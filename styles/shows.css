@@ -323,4 +323,48 @@ a, a:visited {
 }
 .nav .hero__title-large {
   width: 280px;
+}
+
+.shows-section .shows {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.shows-section .shows__head {
+  display: none;
+}
+.shows-section .shows__head-item {
+  display: flex;
+  flex-direction: column;
+}
+.shows-section .shows__head-item::before {
+  content: attr(data-label);
+  display: none;
+}
+.shows-section .shows__row {
+  border-bottom: 1px solid #AFAFAF;
+  padding-top: 1rem;
+}
+.shows-section .shows__row-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+.shows-section .shows__row-item--date {
+  font-weight: bold;
+}
+.shows-section .shows__row-item::before {
+  content: attr(data-label);
+  font-weight: normal;
+  text-transform: capitalize;
+  padding-bottom: 8px;
+  color: #AFAFAF;
+}
+.shows-section .shows__row-item-btn {
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  color: #FFFFFF;
+  background-color: #323232;
 }/*# sourceMappingURL=shows.css.map */

@@ -481,10 +481,10 @@ a, a:visited {
 .main .comment-area .comments__form-button {
   border: none;
   border-radius: 5px;
-  margin-top: 1rem;
   height: 40px;
   color: #FFFFFF;
   background-color: #323232;
+  margin-top: 1rem;
 }
 .main .comment-area .comment__dom .comment {
   display: flex;

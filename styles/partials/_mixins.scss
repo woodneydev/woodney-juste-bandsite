@@ -87,6 +87,14 @@
     padding: 0 $left-right-pad $bottom-pad;
 }
 
+@mixin button {
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    color: $primary3;
+    background-color: $primary1;
+}
+
 @mixin tablet {
     @media screen and (min-width: $tablet) {
         @content;

@@ -1,4 +1,4 @@
-let targetEl = document.querySelector("shows-section");
+let targetEl = document.querySelector(".shows-section");
 
 const showsArr = [
     {
@@ -45,7 +45,6 @@ const createMainH1 = () => {
 const createTb = () => {
     const table = document.createElement("table");
     table.classList.add("shows");
-
     return table
 }
 
@@ -55,14 +54,17 @@ const createTh = () => {
 
     const dateEl = document.createElement("th");
     dateEl.classList.add("shows__head-item");
+    dateEl.setAttribute("data-label","date");
     dateEl.innerText = "DATE";
     
     const venueEl = document.createElement("th");
     venueEl.classList.add("shows__head-item");
+    venueEl.setAttribute("data-label","venue");
     venueEl.innerText = "VENUE";
 
     const locationEl = document.createElement("th");
     locationEl.classList.add("shows__head-item");
+    locationEl.setAttribute("data-label","location");
     locationEl.innerText = "LOCATION";
 
     row.appendChild(dateEl);
@@ -78,15 +80,18 @@ const createTr = ({date, venue, location}) => {
     row.classList.add("shows__row");
 
     const dateEl = document.createElement("td");
-    dateEl.classList.add("shows__row-item");
+    dateEl.classList.add("shows__row-item", "shows__row-item--date");
+    dateEl.setAttribute("data-label","date");
     dateEl.innerText = date;
 
     const venueEl = document.createElement("td");
     venueEl.classList.add("shows__row-item");
+    venueEl.setAttribute("data-label","venue");
     venueEl.innerText = venue;
 
     const locationEl = document.createElement("td");
     locationEl.classList.add("shows__row-item");
+    locationEl.setAttribute("data-label","location");
     locationEl.innerText = location;
 
     const buttonEl = document.createElement("td");
@@ -103,14 +108,20 @@ const createTr = ({date, venue, location}) => {
 
     return row
 }
-
 const h1 = createMainH1();
 const table = createTb();
-const tableHead = createTh;
+const tableHead = createTh();
 table.appendChild(tableHead);
 
 const loadShows = showsArr => {
-    showosArr.array.forEach(show => {
-        
+    showsArr.forEach(show => {
+        const row = createTr(show);
+        console.log(row.innerHTML)
+        table.appendChild(row);
     });
+
+    targetEl.appendChild(h1)
+    targetEl.appendChild(table)
 }
+
+loadShows(showsArr);

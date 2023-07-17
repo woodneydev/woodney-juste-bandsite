@@ -173,12 +173,8 @@
                 }
 
                 &-button {
-                    border: none;
-                    border-radius: 5px;
+                    @include button;
                     margin-top: $mobile-padding-btw-components;
-                    height: 40px;
-                    color: $primary3;
-                    background-color: $primary1;
                 }
             }
         }

@@ -131,8 +131,7 @@ const tableRows = document.querySelectorAll(".shows__row");
 const handleClick = event => {
    const prevSelected = document.querySelector(".shows__row--selected")
    if (prevSelected) {
-    console.log("hhhhhhhhhhhhhhhhhhhhh")
-    prevSelected.classList.remove(".shows__row--selected");
+    prevSelected.classList.remove("shows__row--selected");
    } 
 
    const selected = event.target

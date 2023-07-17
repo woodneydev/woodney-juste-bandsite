@@ -125,3 +125,21 @@ const loadShows = showsArr => {
 }
 
 loadShows(showsArr);
+
+const tableRows = document.querySelectorAll(".shows__row");
+
+const handleClick = event => {
+   const prevSelected = document.querySelector(".shows__row--selected")
+   if (prevSelected) {
+    console.log("hhhhhhhhhhhhhhhhhhhhh")
+    prevSelected.classList.remove(".shows__row--selected");
+   } 
+
+   const selected = event.target
+   selected.classList.add("shows__row--selected");
+}
+
+tableRows.forEach(row => {
+    console.log(row)
+    row.addEventListener("click", handleClick)
+})

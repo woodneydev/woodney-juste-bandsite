@@ -30,13 +30,13 @@
         &__head {
             display: none;
 
-            &-item {
-                display: flex;
-                flex-direction: column;
+            @include tablet {
+                display: table-row;
+            }
 
-                &::before {
-                    content: attr(data-label);
-                    display: none;
+            &-item {
+                @include tablet {
+                    text-align: start;
                 }
             }
         }
@@ -49,28 +49,40 @@
                 display: flex;
                 flex-direction: column;
                 padding-bottom: $mobile-padding-btw-components;
-                
-                &--date{
-                    font-weight: bold;
+
+                @include tablet {
+                    display: table-cell;
+                    height: 50px;
+                    padding: $padding-between-components 0;
                 }
 
                 &::before {
                     content: attr(data-label);
-                    font-weight: normal;
                     text-transform: capitalize;
                     padding-bottom: 8px;
-                    color: $primary2
+
+                    @include tablet {
+                        display: none;
+                    }
                 }
 
                 &-btn {
                     @include button;
                 }
             }
-         }
 
-        // th, td {
-        //     display: flex;
-        //     flex-direction: column;
-        // }
+            &:hover {
+                background-color: $seconday3;
+            }
+            
+            &--selected {
+                background-color: $primary2;
+            }
+        }
+
+        @include tablet {
+            display: table;
+        }
+        
     }
 }

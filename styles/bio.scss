@@ -164,7 +164,9 @@
     .comment-area {
         
         &__title {
-            padding: 48px 112px 36px;
+            @include tablet {
+                padding: 48px 112px 36px;
+            }
         }
         
         .comments {

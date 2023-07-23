@@ -5,6 +5,12 @@
 
 .nav {
     .hero {
+        height: auto;
+
+        @include tablet {
+            
+        }
+
         &__title {
             align-items: flex-start;
             flex-direction: column;
@@ -14,6 +20,22 @@
             }
             &-large {
                 width: 280px;
+                
+                @include tablet {
+                    width: 650px;
+                }
+            }
+
+            &-music {
+                width: 100%;
+                margin-bottom: 20px;
+                &-item {
+                 width: 100%;
+
+                 @include tablet {
+                    width: 50%;
+                 }
+                }
             }
         }
     }
@@ -35,6 +57,7 @@
             }
 
             &-item {
+                color: $primary2;
                 @include tablet {
                     text-align: start;
                 }
@@ -49,6 +72,8 @@
                 display: flex;
                 flex-direction: column;
                 padding-bottom: $mobile-padding-btw-components;
+                color: $primary1;
+                font-weight: 600;
 
                 @include tablet {
                     display: table-cell;
@@ -56,11 +81,17 @@
                     padding: $padding-between-components 0;
                 }
 
+                &--date {
+                    font-weight: 700;
+                }
+
                 &::before {
                     content: attr(data-label);
-                    text-transform: capitalize;
+                    text-transform: uppercase;
                     padding-bottom: 8px;
-
+                    color: $primary2;
+                    font-weight: normal;
+                    font-size: .85rem;
                     @include tablet {
                         display: none;
                     }
@@ -83,6 +114,5 @@
         @include tablet {
             display: table;
         }
-        
     }
 }

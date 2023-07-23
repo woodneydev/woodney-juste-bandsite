@@ -70,10 +70,9 @@ const loadComments = () => {
   
   axios.get("https://project-1-api.herokuapp.com/comments?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4")
   .then(result => {
-    const {data} = result
-    commentsArray.length = 0;
+    const {data} = result;
     commentsArray.splice(0, commentsArray.length, ...data)
-    commentsArray.reverse();
+    commentsArray.sort((first,second) => second.timestamp - first.timestamp )
   
     console.log(commentsArray);
     
@@ -82,8 +81,6 @@ const loadComments = () => {
       commentsParent.appendChild(commentEl);
     });
   })
-
-
 };
 
 const handleSubmit = (event) => {
@@ -112,11 +109,8 @@ const handleSubmit = (event) => {
       loadComments();
     })
     .catch(error => console.log("there was an error:", error))
-    
-
 };
 
 loadComments();
-
 
 formEl.addEventListener("submit", handleSubmit);

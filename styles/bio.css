@@ -198,6 +198,7 @@ a, a:visited {
   width: 100%;
   height: 100%;
   padding-left: 1rem;
+  padding-right: 1rem;
   background-color: rgba(50, 50, 50, 0.3137254902);
   display: flex;
   align-items: center;
@@ -220,7 +221,7 @@ a, a:visited {
 }
 @media screen and (min-width: 1280px) {
   .nav .hero {
-    height: 70vh;
+    height: 80vh;
   }
 }
 
@@ -243,6 +244,7 @@ a, a:visited {
   .footer .card__title {
     flex: 0 0 auto;
     padding: 3rem 2.25rem 2.25rem;
+    padding: 3rem 10.85px 2.25rem 0px;
     padding-right: 10.85px;
   }
 }
@@ -258,17 +260,48 @@ a, a:visited {
   height: 1.5rem;
   margin-right: 1.5rem;
 }
+@media screen and (min-width: 768px) {
+  .footer .card__collection--first {
+    padding-left: 0;
+  }
+}
 .footer .card__collection--middle {
   padding: 0 16px;
 }
+@media screen and (min-width: 768px) {
+  .footer .card__collection--middle {
+    padding: 0 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer .card__collection--middle {
+    padding: 0 36px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer .card__collection--end {
+    padding-right: 0;
+  }
+}
 .footer .card__collection-group {
   padding-bottom: 1rem;
+}
+.footer .card__collection-group--who {
+  font-weight: bold;
+}
+.footer .card__collection-group-item--head {
+  font-weight: bold;
 }
 @media screen and (min-width: 768px) {
   .footer .card__collection--img {
     display: flex;
     align-items: center;
     padding-left: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer .card__collection--img {
+    padding-left: 36px;
   }
 }
 .footer .card__logo {
@@ -279,7 +312,6 @@ a, a:visited {
   .footer .card__logo {
     display: block;
     margin-left: auto;
-    padding-right: 2.25rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -288,6 +320,26 @@ a, a:visited {
     width: 100%;
     align-items: baseline;
     justify-content: space-between;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer .card--social {
+    padding-left: 112px;
+    padding-right: 112px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer .card--contacts {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer .card--contacts {
+    padding-left: 112px;
+    padding-right: 112px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -469,8 +521,10 @@ a, a:visited {
     padding-bottom: 0;
   }
 }
-.main .comment-area__title {
-  padding: 48px 112px 36px;
+@media screen and (min-width: 768px) {
+  .main .comment-area__title {
+    padding: 48px 112px 36px;
+  }
 }
 .main .comment-area .comments {
   display: flex;

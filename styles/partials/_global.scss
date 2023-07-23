@@ -179,6 +179,7 @@ a, a:visited {
             width: 100%;
             height: 100%;
             padding-left: $mobile-padding-btw-components;
+            padding-right: $mobile-padding-btw-components;
             background-color: #32323250;
             @include flex-box(null, center);
 
@@ -197,7 +198,7 @@ a, a:visited {
         }
 
         @include desktop {
-            height: 70vh;
+            height: 80vh;
         }
     }
 }
@@ -218,6 +219,7 @@ a, a:visited {
             @include tablet {
                 flex: 0 0 auto;
                 @include title-spacing($padding-before-headlines, $padding-between-components, $padding-after-headlines);
+                padding: $padding-before-headlines 10.85px $padding-after-headlines 0px;
                 padding-right: 10.85px;
             }
         }
@@ -239,12 +241,40 @@ a, a:visited {
                 margin-right: 1.5rem;
             }
 
+            &--first {
+                @include tablet {
+                    padding-left: 0; 
+                }
+            }
+
             &--middle {
                 padding: 0 16px;
+                @include tablet {
+                    padding: 0 16px; 
+                }
+                @include desktop {
+                    padding: 0 36px; 
+                }
+            }
+
+            &--end {
+                @include tablet {
+                    padding-right: 0;
+                }
             }
 
             &-group {
                 padding-bottom: $mobile-padding-btw-components;
+
+                &--who {
+                    font-weight: bold;
+                }
+
+                &-item{
+                    &--head {
+                        font-weight: bold;
+                    }
+                }
             }
 
             &--img {
@@ -253,6 +283,10 @@ a, a:visited {
                     display: flex;
                     align-items: center;
                     padding-left: 16px;
+                }
+
+                @include desktop {
+                    padding-left: 36px;
                 }
             }
 
@@ -265,8 +299,11 @@ a, a:visited {
             @include tablet {
                 display: block;
                 margin-left: auto;
-                padding-right: $padding-between-components;
-    
+                // padding-right: $padding-between-components;
+            }
+
+            @include desktop {
+                // padding-right: 112px;
             }
             
         }
@@ -277,6 +314,25 @@ a, a:visited {
                 width: 100%;
                 align-items: baseline;
                 justify-content: space-between;
+                padding-left: 36px;
+                padding-right: 36px;
+            }
+
+            @include desktop {
+                padding-left: 112px;
+                padding-right: 112px;
+            }
+        }
+
+        &--contacts {
+            @include tablet {
+                padding-left: 36px;
+                padding-right: 36px;
+            }
+
+            @include desktop {
+                padding-left: 112px;
+                padding-right: 112px;
             }
         }
 

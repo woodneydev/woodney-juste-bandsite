@@ -29,7 +29,9 @@ const createComment = (commentObj) => {
   nameEl.classList.add("comment__section-details-name");
 
   const dateEl = document.createElement("p");
-  dateEl.innerText = commentObj.date;
+  const date = new Date(commentObj.timestamp)
+  const formatted = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`
+  dateEl.innerText = formatted;
   dateEl.classList.add("comment__section-details-date");
 
   const commentEl = document.createElement("p");
@@ -65,11 +67,23 @@ const loadComments = () => {
   const commentsParent = document.querySelector(".comment__dom");
 
   commentsParent.innerHTML = "";
+  
+  axios.get("https://project-1-api.herokuapp.com/comments?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4")
+  .then(result => {
+    const {data} = result
+    commentsArray.length = 0;
+    commentsArray.splice(0, commentsArray.length, ...data)
+    commentsArray.reverse();
+  
+    console.log(commentsArray);
+    
+    commentsArray.forEach((comment) => {
+      const commentEl = createComment(comment);
+      commentsParent.appendChild(commentEl);
+    });
+  })
 
-  commentsArray.forEach((comment) => {
-    const commentEl = createComment(comment);
-    commentsParent.appendChild(commentEl);
-  });
+
 };
 
 const handleSubmit = (event) => {
@@ -77,18 +91,32 @@ const handleSubmit = (event) => {
 
   const name = event.target.name.value;
   const comment = event.target.comment.value;
+  const timestamp = Date.now()
+  // const dateObj = new Date();
+  // const month =
+  //   dateObj.getMonth() + 1 < 10
+  //     ? "0" + (dateObj.getMonth() + 1)
+  //     : dateObj.getMonth() + 1;
+  // const date = month + "/" + dateObj.getDate() + "/" + dateObj.getFullYear();
 
-  const dateObj = new Date();
-  const month =
-    dateObj.getMonth() + 1 < 10
-      ? "0" + (dateObj.getMonth() + 1)
-      : dateObj.getMonth() + 1;
-  const date = month + "/" + dateObj.getDate() + "/" + dateObj.getFullYear();
+  const postObj = { name, comment}
+  
+  axios.post("https://project-1-api.herokuapp.com/comments?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4", postObj)
+    .then( ({data}) => {
+      console.log(data)
+      return data
+    })
+    .then(date => {
+      formEl.name.value = "";
+      formEl.comment.value ="";
+      loadComments();
+    })
+    .catch(error => console.log("there was an error:", error))
+    
 
-  commentsArray.unshift({ name, date, comment });
-  loadComments();
 };
 
 loadComments();
+
 
 formEl.addEventListener("submit", handleSubmit);

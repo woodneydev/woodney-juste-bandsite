@@ -118,7 +118,7 @@ a, a:visited {
             }
 
             @include desktop {
-                margin-left: 0;
+                margin-left: 112px;
             }
         }
 
@@ -187,7 +187,7 @@ a, a:visited {
             }
 
             @include desktop {
-                padding-left: 160px;
+                padding-left: 112px;
             }
         }
 
@@ -230,6 +230,10 @@ a, a:visited {
                 padding: 0 $padding-between-components $padding-between-components;
             }
 
+            // &--first{
+            //     padding-left: 112px;
+            // }
+
             &-img {
                 height: 1.5rem;
                 margin-right: 1.5rem;
@@ -264,6 +268,7 @@ a, a:visited {
                 padding-right: $padding-between-components;
     
             }
+            
         }
 
         &--social {
@@ -295,6 +300,10 @@ a, a:visited {
 
         @include tablet {
             padding: 0 $padding-between-components $padding-between-components;
+        }
+
+        @include desktop {
+            padding: 0 112px;
         }
     }
 }

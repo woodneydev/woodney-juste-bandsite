@@ -74,7 +74,8 @@ const createTh = () => {
     return row
 }
 
-const createTr = ({date, venue, location}) => {
+const createTr = ({date, place, location}) => {
+    const venue = place;
 
     const row = document.createElement("tr");
     row.classList.add("shows__row");
@@ -82,6 +83,9 @@ const createTr = ({date, venue, location}) => {
     const dateEl = document.createElement("td");
     dateEl.classList.add("shows__row-item", "shows__row-item--date");
     dateEl.setAttribute("data-label","date");
+
+    const formatted = Date.now(date)
+    formatted
     dateEl.innerText = date;
 
     const venueEl = document.createElement("td");
@@ -108,37 +112,55 @@ const createTr = ({date, venue, location}) => {
 
     return row
 }
+
 const h1 = createMainH1();
 const table = createTb();
 const tableHead = createTh();
 table.appendChild(tableHead);
 
-const loadShows = showsArr => {
-    showsArr.forEach(show => {
-        const row = createTr(show);
-        console.log(row.innerHTML)
-        table.appendChild(row);
-    });
-
-    targetEl.appendChild(h1)
-    targetEl.appendChild(table)
-}
-
-loadShows(showsArr);
-
-const tableRows = document.querySelectorAll(".shows__row");
-
 const handleClick = event => {
-   const prevSelected = document.querySelector(".shows__row--selected")
+    console.log("i was clicked")
+   const prevSelected = document.querySelector(".shows__row--selected");
    if (prevSelected) {
     prevSelected.classList.remove("shows__row--selected");
    } 
 
-   const selected = event.target
+   const selected = event.currentTarget;
    selected.classList.add("shows__row--selected");
 }
 
-tableRows.forEach(row => {
-    console.log(row)
-    row.addEventListener("click", handleClick)
-})
+const loadShows = () => {
+
+    axios.get("https://project-1-api.herokuapp.com/showdates?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4")
+    .then(({data}) => {       
+        showsArr.length = 0;
+        showsArr.splice(0, showsArr.length, ...data)
+        
+        showsArr.forEach(show => {
+            const row = createTr(show);
+            table.appendChild(row);
+        });
+
+        targetEl.appendChild(h1);
+        targetEl.appendChild(table);
+
+        const tableRows = document.querySelectorAll(".shows__row");
+
+        tableRows.forEach(row => {
+            row.addEventListener("click", handleClick);
+        })        
+
+    })
+    .catch(error => {
+        console.log("there was an error:", error)
+    })
+
+}
+
+loadShows();
+
+
+
+
+
+

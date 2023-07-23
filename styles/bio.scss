@@ -11,7 +11,7 @@
             color: $primary1;
 
             @include desktop {
-                margin-left: 130px;
+                padding: 48px 112px 36px;
             }
         }
 
@@ -24,6 +24,10 @@
                 display: flex;
                 justify-content: center;
             }
+
+            @include desktop {
+                padding: 0 200px $padding-between-components;
+            }
         }
 
         &__quote{
@@ -31,6 +35,10 @@
             
             @include tablet {
                 padding: 0 96px $mobile-padding-btw-components;
+            }
+
+            @include desktop {
+                padding: 0 200px $mobile-padding-btw-components;
             }
 
             &--large {
@@ -48,12 +56,17 @@
 
     .article {
         @include tablet {
-            margin: 0 80px;
+            margin: 0 96px;
+        }
+
+        @include desktop {
+            margin: 0 200px;
         }
 
         &__title {
             @include tablet {
-                padding-left: 16px;
+                padding-left: 0;
+                padding-right: 0;
             }
         }
 
@@ -62,7 +75,20 @@
                 display: flex;
             }
 
-            &-text{
+            &-text {
+
+                &--left {
+                    @include tablet {
+                        padding-left: 0;
+                    }
+                }
+
+                &--right {
+                    @include tablet {
+                        padding-right: 0px;
+                    }
+                }
+        
                 @include tablet {
                     padding-bottom: $padding-between-components;
                 }
@@ -80,7 +106,9 @@
             }
 
             @include desktop {
-                margin: 0 80px;
+                padding: 48px 112px 36px;
+
+                // margin: 0 80px;
             }
         }
         
@@ -93,6 +121,10 @@
                 @include flex-box(null, null, row);
                 padding: 0 36px 16px;
             }
+
+            @include desktop {
+                padding: 0 112px 36px;
+            }
             &-img {
                 width: 100%;
                 padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
@@ -100,6 +132,12 @@
                 @include tablet {
                     width: 33.3%;
                     padding: 8px;
+                }
+
+                &--top {
+                    @include tablet {
+                        padding-top: 0;
+                    }
                 }
 
                 &--left {
@@ -113,12 +151,21 @@
                         padding-right: 0;
                     }
                 }
+
+                &--bottom {
+                    @include tablet {
+                        padding-bottom: 0;
+                    }
+                }
             }
         }
     }
 
     .comment-area {
         
+        &__title {
+            padding: 48px 112px 36px;
+        }
         
         .comments {
             display: flex;
@@ -189,6 +236,12 @@
             @include tablet {
                 padding: 0 96px;
             }
+
+            @include desktop {
+                width: 512px;
+                padding: 0;
+                margin: 0 auto;
+            }
         }
 
         .comment__dom {
@@ -196,6 +249,12 @@
 
             @include tablet {
                 padding: 0 96px;
+            }
+
+            @include desktop {
+                width: 512px;
+                padding: 0;
+                margin: 0 auto;
             }
 
             .comment {
@@ -211,6 +270,7 @@
                 
                 &:last-child {
                     border-bottom: 2px solid $seconday2;
+                    margin-bottom: 36px;
                 }
                 
                 &__img {

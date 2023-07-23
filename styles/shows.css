@@ -142,7 +142,7 @@ a, a:visited {
 }
 @media screen and (min-width: 1280px) {
   .nav-bar__img {
-    margin-left: 0;
+    margin-left: 112px;
   }
 }
 .nav-bar__list {
@@ -210,7 +210,7 @@ a, a:visited {
 }
 @media screen and (min-width: 1280px) {
   .nav .hero__title {
-    padding-left: 160px;
+    padding-left: 112px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -313,6 +313,11 @@ a, a:visited {
     padding: 0 2.25rem 2.25rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer__legal {
+    padding: 0 112px;
+  }
+}
 
 .nav .hero__title {
   align-items: flex-start;
@@ -379,7 +384,7 @@ a, a:visited {
   background-color: #323232;
 }
 .shows-section .shows__row:hover {
-  background-color: #FAFAFA;
+  background-color: #AFAFAF;
 }
 .shows-section .shows__row--selected {
   background-color: #AFAFAF;

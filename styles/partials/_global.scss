@@ -185,10 +185,12 @@ a, a:visited {
 
             @include tablet {
                 padding-left: $padding-between-components;
+                padding-right: $padding-between-components;
             }
 
             @include desktop {
                 padding-left: 112px;
+                padding-right: 112px;
             }
         }
 

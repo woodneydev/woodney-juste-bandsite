@@ -6,6 +6,7 @@
 .nav {
     .hero {
         height: auto;
+        background-image: url("../assets/images/hero-shows.jpg");
 
         @include tablet {
             
@@ -16,10 +17,12 @@
             flex-direction: column;
             &-small {
                 color: white;
+                padding-left: 0;
                 padding-bottom: 0;
             }
             &-large {
-                width: 280px;
+                width: 270px;
+                padding-left: 0;
                 
                 @include tablet {
                     width: 650px;
@@ -28,7 +31,12 @@
 
             &-music {
                 width: 100%;
-                margin-bottom: 20px;
+                margin-bottom: 36px;
+
+                @include tablet {
+                    margin-bottom: 72px;
+                }
+
                 &-item {
                  width: 100%;
 
@@ -42,7 +50,24 @@
 }
 
 .shows-section {
+    @include tablet {
+        padding: 0 $padding-between-components;
+    }
 
+    @include desktop {
+        padding: 0 112px;
+        display: flex;
+    }
+
+    &__title {
+        @include tablet {
+            padding-left: 0;
+        }
+
+        @include desktop {
+            margin-right: 176px
+        }
+    }
     .shows {
         width: 100%;
         display: flex;
@@ -79,6 +104,7 @@
                     display: table-cell;
                     height: 50px;
                     padding: $padding-between-components 0;
+                    border-bottom:  1px solid $seconday2;
                 }
 
                 &--date {
@@ -99,6 +125,10 @@
 
                 &-btn {
                     @include button;
+
+                    @include tablet {
+                        width: 90%;
+                    }
                 }
             }
 
@@ -113,6 +143,14 @@
 
         @include tablet {
             display: table;
+            // padding: 50;
+            // margin-right: $padding-between-components;
+            border-collapse: collapse;
+        }
+
+        @include desktop {
+            margin-top: 72px;
+            border-collapse: collapse;
         }
     }
 }

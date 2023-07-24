@@ -207,11 +207,13 @@ a, a:visited {
 @media screen and (min-width: 768px) {
   .nav .hero__title {
     padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .nav .hero__title {
     padding-left: 112px;
+    padding-right: 112px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -373,6 +375,7 @@ a, a:visited {
 
 .nav .hero {
   height: auto;
+  background-image: url("../assets/images/hero-shows.jpg");
 }
 .nav .hero__title {
   align-items: flex-start;
@@ -380,10 +383,12 @@ a, a:visited {
 }
 .nav .hero__title-small {
   color: white;
+  padding-left: 0;
   padding-bottom: 0;
 }
 .nav .hero__title-large {
-  width: 280px;
+  width: 270px;
+  padding-left: 0;
 }
 @media screen and (min-width: 768px) {
   .nav .hero__title-large {
@@ -392,7 +397,12 @@ a, a:visited {
 }
 .nav .hero__title-music {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
+}
+@media screen and (min-width: 768px) {
+  .nav .hero__title-music {
+    margin-bottom: 72px;
+  }
 }
 .nav .hero__title-music-item {
   width: 100%;
@@ -403,6 +413,27 @@ a, a:visited {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .shows-section {
+    padding: 0 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows-section {
+    padding: 0 112px;
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shows-section__title {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows-section__title {
+    margin-right: 176px;
+  }
+}
 .shows-section .shows {
   width: 100%;
   display: flex;
@@ -441,6 +472,7 @@ a, a:visited {
     display: table-cell;
     height: 50px;
     padding: 2.25rem 0;
+    border-bottom: 1px solid #E1E1E1;
   }
 }
 .shows-section .shows__row-item--date {
@@ -466,6 +498,11 @@ a, a:visited {
   color: #FFFFFF;
   background-color: #323232;
 }
+@media screen and (min-width: 768px) {
+  .shows-section .shows__row-item-btn {
+    width: 90%;
+  }
+}
 .shows-section .shows__row:hover {
   background-color: #AFAFAF;
 }
@@ -475,5 +512,12 @@ a, a:visited {
 @media screen and (min-width: 768px) {
   .shows-section .shows {
     display: table;
+    border-collapse: collapse;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows-section .shows {
+    margin-top: 72px;
+    border-collapse: collapse;
   }
 }/*# sourceMappingURL=shows.css.map */

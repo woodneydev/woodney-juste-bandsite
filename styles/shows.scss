@@ -2,155 +2,174 @@
 @use "partials/variables" as *;
 @use "partials/mixins" as *;
 
-
 .nav {
-    .hero {
-        height: auto;
-        background-image: url("../assets/images/hero-shows.jpg");
-
-        @include tablet {
-            
-        }
-
-        &__title {
-            align-items: flex-start;
-            flex-direction: column;
-            &-small {
-                color: white;
-                padding-left: 0;
-                padding-bottom: 0;
-            }
-            &-large {
-                width: 270px;
-                padding-left: 0;
-                
-                @include tablet {
-                    width: 650px;
-                }
-            }
-
-            &-music {
-                width: 100%;
-                margin-bottom: 36px;
-
-                @include tablet {
-                    margin-bottom: 72px;
-                }
-
-                &-item {
-                 width: 100%;
-
-                 @include tablet {
-                    width: 50%;
-                 }
-                }
-            }
-        }
-    }
-}
-
-.shows-section {
-    @include tablet {
-        padding: 0 $padding-between-components;
-    }
+  .hero {
+    height: auto;
+    background-image: url("../assets/images/hero-shows.jpg");
 
     @include desktop {
-        padding: 0 112px;
-        display: flex;
+      height: 65vh;
     }
 
     &__title {
+      align-items: flex-start;
+      flex-direction: column;
+
+      @include desktop {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      &-sec {
+        &-small {
+          color: white;
+          padding-left: 0;
+          padding-bottom: 0;
+        }
+        &-large {
+          width: 16.875rem;
+          padding-left: 0;
+
+          @include tablet {
+            width: 40.625rem;
+          }
+
+          @include desktop {
+            width: 34.375rem;
+          }
+        }
+      }
+
+      &-music {
+        width: 100%;
+        margin-bottom: 2.25rem;
+
         @include tablet {
-            padding-left: 0;
+          margin-bottom: 4.5rem;
         }
 
         @include desktop {
-            margin-right: 176px
+          margin: 0;
+          width: 100%;
         }
+
+        &-item {
+          width: 100%;
+
+          @include tablet {
+            width: 50%;
+          }
+
+          @include desktop {
+            margin-top: 6.25rem;
+            width: 99%;
+          }
+        }
+      }
     }
-    .shows {
-        width: 100%;
+  }
+}
+
+.shows-section {
+  @include tablet {
+    padding: 0 $padding-between-components;
+  }
+
+  @include desktop {
+    padding: 0 7rem;
+    display: flex;
+  }
+
+  &__title {
+    @include tablet {
+      padding-left: 0;
+    }
+
+    @include desktop {
+      margin-right: 11rem;
+    }
+  }
+  .shows {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 $mobile-padding-btw-components;
+
+    &__head {
+      display: none;
+
+      @include tablet {
+        display: table-row;
+      }
+
+      &-item {
+        color: $primary2;
+        @include tablet {
+          text-align: start;
+        }
+      }
+    }
+
+    &__row {
+      border-bottom: .0625rem solid $primary2;
+      padding-top: $mobile-padding-btw-components;
+
+      &-item {
         display: flex;
         flex-direction: column;
-        padding: 0 $mobile-padding-btw-components;
-        
-        &__head {
-            display: none;
-
-            @include tablet {
-                display: table-row;
-            }
-
-            &-item {
-                color: $primary2;
-                @include tablet {
-                    text-align: start;
-                }
-            }
-        }
-
-        &__row {
-            border-bottom: 1px solid $primary2;
-            padding-top: $mobile-padding-btw-components;
-
-              &-item {
-                display: flex;
-                flex-direction: column;
-                padding-bottom: $mobile-padding-btw-components;
-                color: $primary1;
-                font-weight: 600;
-
-                @include tablet {
-                    display: table-cell;
-                    height: 50px;
-                    padding: $padding-between-components 0;
-                    border-bottom:  1px solid $seconday2;
-                }
-
-                &--date {
-                    font-weight: 700;
-                }
-
-                &::before {
-                    content: attr(data-label);
-                    text-transform: uppercase;
-                    padding-bottom: 8px;
-                    color: $primary2;
-                    font-weight: normal;
-                    font-size: .85rem;
-                    @include tablet {
-                        display: none;
-                    }
-                }
-
-                &-btn {
-                    @include button;
-
-                    @include tablet {
-                        width: 90%;
-                    }
-                }
-            }
-
-            &:hover {
-                background-color: $primary2;
-            }
-            
-            &--selected {
-                background-color: $primary2;
-            }
-        }
+        padding-bottom: $mobile-padding-btw-components;
+        color: $primary1;
+        font-weight: 600;
 
         @include tablet {
-            display: table;
-            // padding: 50;
-            // margin-right: $padding-between-components;
-            border-collapse: collapse;
+          display: table-cell;
+          height: 3.125rem;
+          padding: $padding-between-components 0;
+          border-bottom: .0625rem solid $seconday2;
         }
 
-        @include desktop {
-            margin-top: 72px;
-            border-collapse: collapse;
+        &--date {
+          font-weight: 700;
         }
+
+        &::before {
+          content: attr(data-label);
+          text-transform: uppercase;
+          padding-bottom: .5rem;
+          color: $primary2;
+          font-weight: normal;
+          font-size: 0.85rem;
+          @include tablet {
+            display: none;
+          }
+        }
+
+        &-btn {
+          @include button;
+
+          @include tablet {
+            width: 90%;
+          }
+        }
+      }
+
+      &:hover {
+        background-color: $primary2;
+      }
+
+      &--selected {
+        background-color: $primary2;
+      }
     }
+
+    @include tablet {
+      display: table;
+      border-collapse: collapse;
+    }
+
+    @include desktop {
+      margin-top: 4.5rem;
+      border-collapse: collapse;
+    }
+  }
 }

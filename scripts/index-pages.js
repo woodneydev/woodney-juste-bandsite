@@ -10,27 +10,27 @@ const commentsArray = [
 
   {
     name: "Lupe",
-    comment:
-      "You guys rock!",
+    comment: "You guys rock!",
     date: "12/22/2022",
   },
 
   {
     name: "Ice",
-    comment:
-      "I want my money back. Waste of time",
+    comment: "I want my money back. Waste of time",
     date: "12/22/2022",
-  }
+  },
 ];
 
-const createComment = (commentObj) => {
+const displayComment = (commentObj) => {
   const nameEl = document.createElement("p");
   nameEl.innerHTML = commentObj.name;
   nameEl.classList.add("comment__section-details-name");
 
   const dateEl = document.createElement("p");
-  const date = new Date(commentObj.timestamp)
-  const formatted = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`
+  const date = new Date(commentObj.timestamp);
+  const formatted = `${
+    date.getMonth() + 1
+  }/${date.getDate()}/${date.getFullYear()}`;
   dateEl.innerText = formatted;
   dateEl.classList.add("comment__section-details-date");
 
@@ -58,8 +58,6 @@ const createComment = (commentObj) => {
   commentsDiv.appendChild(emptyDiv);
   commentsDiv.appendChild(commentSectionDiv);
 
-  console.log(commentsDiv);
-
   return commentsDiv;
 };
 
@@ -67,20 +65,21 @@ const loadComments = () => {
   const commentsParent = document.querySelector(".comment__dom");
 
   commentsParent.innerHTML = "";
-  
-  axios.get("https://project-1-api.herokuapp.com/comments?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4")
-  .then(result => {
-    const {data} = result;
-    commentsArray.splice(0, commentsArray.length, ...data)
-    commentsArray.sort((first,second) => second.timestamp - first.timestamp )
-  
-    console.log(commentsArray);
-    
-    commentsArray.forEach((comment) => {
-      const commentEl = createComment(comment);
-      commentsParent.appendChild(commentEl);
+
+  axios
+    .get(
+      "https://project-1-api.herokuapp.com/comments?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4"
+    )
+    .then((result) => {
+      const { data } = result;
+      commentsArray.splice(0, commentsArray.length, ...data);
+      commentsArray.sort((first, second) => second.timestamp - first.timestamp);
+
+      commentsArray.forEach((comment) => {
+        const commentEl = displayComment(comment);
+        commentsParent.appendChild(commentEl);
+      });
     });
-  })
 };
 
 const handleSubmit = (event) => {
@@ -88,27 +87,24 @@ const handleSubmit = (event) => {
 
   const name = event.target.name.value;
   const comment = event.target.comment.value;
-  const timestamp = Date.now()
-  // const dateObj = new Date();
-  // const month =
-  //   dateObj.getMonth() + 1 < 10
-  //     ? "0" + (dateObj.getMonth() + 1)
-  //     : dateObj.getMonth() + 1;
-  // const date = month + "/" + dateObj.getDate() + "/" + dateObj.getFullYear();
+  const timestamp = Date.now();
 
-  const postObj = { name, comment}
-  
-  axios.post("https://project-1-api.herokuapp.com/comments?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4", postObj)
-    .then( ({data}) => {
-      console.log(data)
-      return data
+  const postObj = { name, comment };
+
+  axios
+    .post(
+      "https://project-1-api.herokuapp.com/comments?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4",
+      postObj
+    )
+    .then(({ data }) => {
+      return data;
     })
-    .then(date => {
+    .then((date) => {
       formEl.name.value = "";
-      formEl.comment.value ="";
+      formEl.comment.value = "";
       loadComments();
     })
-    .catch(error => console.log("there was an error:", error))
+    .catch((error) => alert("there was an error"));
 };
 
 loadComments();

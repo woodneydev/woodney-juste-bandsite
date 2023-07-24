@@ -1,307 +1,302 @@
-@use "partials/variables"as *;
-@use "partials/mixins"as *;
+@use "partials/variables" as *;
+@use "partials/mixins" as *;
 @use "partials/global";
 
 .main {
-    background-color: $primary3;
+  background-color: $primary3;
 
-    .intro {
-        
-        &__title {
-            color: $primary1;
+  .intro {
+    &__title {
+      color: $primary1;
 
-            @include desktop {
-                padding: 48px 112px 36px;
+      @include desktop {
+        padding: 3rem 7rem 2.25rem;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
+
+      @include tablet {
+        padding: 0 6rem $padding-between-components;
+        display: flex;
+        justify-content: center;
+      }
+
+      @include desktop {
+        padding: 0 12.5rem $padding-between-components;
+      }
+    }
+
+    &__quote {
+      @include mobile-subheader;
+
+      @include tablet {
+        padding: 0 6rem $mobile-padding-btw-components;
+      }
+
+      @include desktop {
+        padding: 0 12.5rem $mobile-padding-btw-components;
+      }
+
+      &--large {
+        @include tablet {
+          @include subheader;
+          color: $primary1;
+        }
+      }
+
+      &--last {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .article {
+    @include tablet {
+      margin: 0 6rem;
+    }
+
+    @include desktop {
+      margin: 0 12.5rem;
+    }
+
+    &__title {
+      @include tablet {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &__content {
+      @include tablet {
+        display: flex;
+      }
+
+      &-text {
+        &--left {
+          @include tablet {
+            padding-left: 0;
+          }
+        }
+
+        &--right {
+          @include tablet {
+            padding-right: 0rem;
+          }
+        }
+
+        @include tablet {
+          padding-bottom: $padding-between-components;
+        }
+      }
+    }
+  }
+
+  .gallery {
+    background-color: $seconday3;
+
+    &__title {
+      @include tablet {
+        @include title-spacing(
+          $padding-before-headlines,
+          $padding-between-components,
+          1.25rem
+        );
+      }
+
+      @include desktop {
+        padding: 3rem 7rem 2.25rem;
+      }
+    }
+
+    &__collection {
+      @include flex-box(null, null, column);
+      flex-wrap: wrap;
+      width: 100%;
+
+      @include tablet {
+        @include flex-box(null, null, row);
+        padding: 0 2.25rem 1rem;
+      }
+
+      @include desktop {
+        padding: 0 7rem 2.25rem;
+      }
+      &-img {
+        width: 100%;
+        padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
+
+        @include tablet {
+          width: 33.3%;
+          padding: .5rem;
+        }
+
+        &--top {
+          @include tablet {
+            padding-top: 0;
+          }
+        }
+
+        &--left {
+          @include tablet {
+            padding-left: 0;
+          }
+        }
+
+        &--right {
+          @include tablet {
+            padding-right: 0;
+          }
+        }
+
+        &--bottom {
+          @include tablet {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .comment-area {
+    &__title {
+      @include tablet {
+        padding: 3rem 7rem 2.25rem;
+      }
+    }
+
+    .comments {
+      display: flex;
+      padding: 0 $mobile-padding-btw-components;
+
+      &__img {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-image: url(../assets/images/Mohan-muruge.jpg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        margin: $mobile-padding-btw-components $mobile-padding-btw-components 0
+          0;
+        flex-shrink: 0;
+      }
+
+      &__form {
+        display: flex;
+        width: 100%;
+
+        flex-direction: column;
+
+        &-label {
+          display: flex;
+          flex-direction: column;
+
+          &-text {
+            height: 2.5rem;
+            border: .0625rem solid $seconday2;
+            background-color: $seconday3;
+            border-radius: .3125rem;
+            margin-bottom: $mobile-padding-btw-components;
+
+            &::placeholder {
+              padding-left: $mobile-padding-btw-components;
+              color: black;
             }
+          }
+
+          &-textarea {
+            height: 5rem;
+            border: .0625rem solid $seconday2;
+            background-color: $seconday3;
+            border-radius: #000;
+
+            &::placeholder {
+              padding-top: .625rem;
+              padding-left: $mobile-padding-btw-components;
+              color: #000;
+            }
+          }
+        }
+
+        &-button {
+          @include button;
+          margin-top: $mobile-padding-btw-components;
+
+          @include tablet {
+            width: 9.375rem;
+            align-self: flex-end;
+          }
+        }
+      }
+
+      @include tablet {
+        padding: 0 6rem;
+      }
+
+      @include desktop {
+        width: 32rem;
+        padding: 0;
+        margin: 0 auto;
+      }
+    }
+
+    .comment__dom {
+      padding: 0 $mobile-padding-btw-components;
+
+      @include tablet {
+        padding: 0 6rem;
+      }
+
+      @include desktop {
+        width: 32rem;
+        padding: 0;
+        margin: 0 auto;
+      }
+
+      .comment {
+        display: flex;
+
+        padding: $mobile-padding-btw-components 0;
+
+        border-top: .125rem solid $seconday2;
+
+        margin-top: $mobile-padding-btw-components;
+        margin-bottom: $mobile-padding-btw-components;
+
+        &:last-child {
+          border-bottom: .125rem solid $seconday2;
+          margin-bottom: 2.25rem;
         }
 
         &__img {
-            width: 100%;
-            padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
-
-            @include tablet {
-                padding: 0 96px $padding-between-components;
-                display: flex;
-                justify-content: center;
-            }
-
-            @include desktop {
-                padding: 0 200px $padding-between-components;
-            }
+          width: 2.5rem;
+          height: 2.5rem;
+          background-color: $seconday2;
+          border-radius: 50%;
+          flex-shrink: 0;
+          margin-right: $mobile-padding-btw-components;
         }
 
-        &__quote{
-            @include mobile-subheader;
-            
-            @include tablet {
-                padding: 0 96px $mobile-padding-btw-components;
-            }
-
-            @include desktop {
-                padding: 0 200px $mobile-padding-btw-components;
-            }
-
-            &--large {
-                @include tablet {
-                    @include subheader;
-                    color: $primary1;
-                }
-            }
-
-            &--last {
-                padding-bottom: 0
-            }
-        }
-    }
-
-    .article {
-        @include tablet {
-            margin: 0 96px;
-        }
-
-        @include desktop {
-            margin: 0 200px;
-        }
-
-        &__title {
-            @include tablet {
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
-
-        &__content {
-            @include tablet {
-                display: flex;
-            }
-
-            &-text {
-
-                &--left {
-                    @include tablet {
-                        padding-left: 0;
-                    }
-                }
-
-                &--right {
-                    @include tablet {
-                        padding-right: 0px;
-                    }
-                }
-        
-                @include tablet {
-                    padding-bottom: $padding-between-components;
-                }
-            }
-        }
-    }
-
-    .gallery {
-        background-color: $seconday3;
-
-        &__title {
-
-            @include tablet {
-                @include title-spacing($padding-before-headlines, $padding-between-components, 20px);
-            }
-
-            @include desktop {
-                padding: 48px 112px 36px;
-
-                // margin: 0 80px;
-            }
-        }
-        
-        &__collection {
-            @include flex-box(null, null, column);
-            flex-wrap: wrap;
-            width: 100%;
-            
-            @include tablet {
-                @include flex-box(null, null, row);
-                padding: 0 36px 16px;
-            }
-
-            @include desktop {
-                padding: 0 112px 36px;
-            }
-            &-img {
-                width: 100%;
-                padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
-                
-                @include tablet {
-                    width: 33.3%;
-                    padding: 8px;
-                }
-
-                &--top {
-                    @include tablet {
-                        padding-top: 0;
-                    }
-                }
-
-                &--left {
-                    @include tablet {
-                        padding-left: 0;
-                    }
-                }
-
-                &--right {
-                    @include tablet {
-                        padding-right: 0;
-                    }
-                }
-
-                &--bottom {
-                    @include tablet {
-                        padding-bottom: 0;
-                    }
-                }
-            }
-        }
-    }
-
-    .comment-area {
-        
-        &__title {
-            @include tablet {
-                padding: 48px 112px 36px;
-            }
-        }
-        
-        .comments {
+        &__section {
+          width: 100%;
+          &-details {
             display: flex;
-            padding: 0 $mobile-padding-btw-components;
+            justify-content: space-between;
+            padding-bottom: .3125rem;
 
-            &__img {
-                width: 40px;
-                height: 40px;
-                background-image: url(../assets/images/Mohan-muruge.jpg);
-                background-position: center;
-                background-size: cover;
-                border-radius: 50%;
-                margin: $mobile-padding-btw-components $mobile-padding-btw-components 0 0; ;
-                flex-shrink: 0;
-
-
+            &-name {
+              font-weight: bold;
+              color: $primary1;
             }
 
-            &__form {
-                display: flex;
-                width: 100%;
-                // margin-right: $mobile-padding-btw-components;
-                flex-direction: column;
-
-                &-label {
-                    display: flex;
-                    flex-direction: column;
-
-                    &-text {
-                        height: 40px;
-                        border: 1px solid $seconday2;
-                        background-color: $seconday3;
-                        border-radius: 5px;
-                        margin-bottom: $mobile-padding-btw-components;
-
-                        &::placeholder {
-                            padding-left: $mobile-padding-btw-components;
-                            color: black;
-                        }
-                    }
-                    
-                    &-textarea {
-                        height: 80px;
-                        border: 1px solid $seconday2;
-                        background-color: $seconday3;
-                        border-radius: #000;
-
-                        &::placeholder {
-                            padding-top: 10px;
-                            padding-left: $mobile-padding-btw-components;
-                            color: #000;
-                        }
-                    }
-                }
-
-                &-button {
-                    @include button;
-                    margin-top: $mobile-padding-btw-components;
-
-                    @include tablet {
-                        width: 150px;
-                        align-self: flex-end;
-                    }
-                }
-                
+            &-date {
+              color: $primary2;
             }
-
-            @include tablet {
-                padding: 0 96px;
-            }
-
-            @include desktop {
-                width: 512px;
-                padding: 0;
-                margin: 0 auto;
-            }
+          }
         }
-
-        .comment__dom {
-            padding: 0 $mobile-padding-btw-components;
-
-            @include tablet {
-                padding: 0 96px;
-            }
-
-            @include desktop {
-                width: 512px;
-                padding: 0;
-                margin: 0 auto;
-            }
-
-            .comment {
-                display: flex;
-                // padding-top: $mobile-padding-btw-components;
-                // padding-bottom: $mobile-padding-btw-components;
-                padding: $mobile-padding-btw-components 0;
-                // margin: 0 16px;
-                border-top: 2px solid $seconday2;
-                
-                margin-top: $mobile-padding-btw-components;
-                margin-bottom: $mobile-padding-btw-components;
-                
-                &:last-child {
-                    border-bottom: 2px solid $seconday2;
-                    margin-bottom: 36px;
-                }
-                
-                &__img {
-                    width: 40px;
-                    height: 40px;
-                    background-color: $seconday2;
-                    border-radius: 50%;
-                    flex-shrink: 0;
-                    margin-right: $mobile-padding-btw-components;
-                }
-
-                &__section {
-                    width: 100%;
-                    &-details {
-                        display: flex;
-                        justify-content: space-between;
-                        padding-bottom: 5px;
-
-                        &-name {
-                            font-weight: bold;
-                            color: $primary1;
-                        }
-
-                        &-date {
-                            color: $primary2;
-                        }
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 }

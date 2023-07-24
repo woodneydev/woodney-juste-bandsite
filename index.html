@@ -16,7 +16,7 @@
             <img class="nav-bar__img" src="./assets/logo/Logo-bandsite.svg" alt="Bandsite logo">
             <ul class="nav-bar__list">
                 <li class="nav-bar__list-item nav-bar__list-item--active"><a class="nav-bar__list-item-link" href="./index.html">Biography</a></li>
-                <li class="nav-bar__list-item"><a class="nav-bar__list-item-link" href="./pages/shows.html">Shows</a></li>
+                <li class="nav-bar__list-item"><a class="nav-bar__list-item-link nav-bar__list-item-link--inactive" href="./pages/shows.html">Shows</a></li>
             </ul>
         </nav>
         <section class="hero">
@@ -26,7 +26,7 @@
     <main class="main">
         <section class="intro">
             <h2 class="intro__title">About the Musicians</h2>
-            <img class="intro__img" src="./assets/images/band.jpg"
+            <img class="intro__img" alt="A Band performing in front of crow with dim lights" src="./assets/images/band.jpg"
                 alt="Indoor concert, musicians performing on stage with a crowd in front of them.">
             <p class="intro__quote intro__quote--large paragraph">"We push each other to be the best. It's not uncommon
                 for one of us to say 'this needs to be better, back
@@ -62,20 +62,20 @@
         <section class="gallery">
             <h2 class="gallery__title">Photo Gallery</h2>
             <div class="gallery__collection">
-                <img src="./assets/images/Photo-gallery-1.jpg" alt=""
+                <img src="./assets/images/Photo-gallery-1.jpg" alt="Crowd of people with reddish lights and smoke effect during concert"
                     class="gallery__collection-img gallery__collection-img--left gallery__collection-img--top">
-                <img src="./assets/images/Photo-gallery-2.jpg" alt="" class="gallery__collection-img gallery__collection-img--top">
-                <img src="./assets/images/Photo-gallery-3.jpg" alt=""
+                <img src="./assets/images/Photo-gallery-2.jpg" alt="A women with arms lifted and hair flying during a concert" class="gallery__collection-img gallery__collection-img--top">
+                <img src="./assets/images/Photo-gallery-3.jpg" alt="A crowd of people with arms lifted in the sky"
                     class="gallery__collection-img gallery__collection-img--right gallery__collection-img--top">
-                <img src="./assets/images/Photo-gallery-4.jpg" alt=""
+                <img src="./assets/images/Photo-gallery-4.jpg" alt="The back side of a women with a striped shirt on enjoying a concert"
                     class="gallery__collection-img gallery__collection-img--left">
-                <img src="./assets/images/Photo-gallery-5.jpg" alt="" class="gallery__collection-img">
-                <img src="./assets/images/Photo-gallery-6.jpg" alt=""
+                <img src="./assets/images/Photo-gallery-5.jpg" alt="Confetti string like material being thrown into the air at a concert" class="gallery__collection-img">
+                <img src="./assets/images/Photo-gallery-6.jpg" alt="A male artist performing on stage at a concert"
                     class="gallery__collection-img gallery__collection-img--right">
-                <img src="./assets/images/Photo-gallery-7.jpg" alt=""
+                <img src="./assets/images/Photo-gallery-7.jpg" alt="Top view of a large crowd at a concert"
                     class="gallery__collection-img gallery__collection-img--left gallery__collection-img--bottom">
-                <img src="./assets/images/Photo-gallery-8.jpg" alt="" class="gallery__collection-img gallery__collection-img--bottom">
-                <img src="./assets/images/Photo-gallery-9.jpg" alt=""
+                <img src="./assets/images/Photo-gallery-8.jpg" alt="Close up view of a DJ turn table at a concert" class="gallery__collection-img gallery__collection-img--bottom">
+                <img src="./assets/images/Photo-gallery-9.jpg" alt="Confetti in the air, dim light, and people with hands raised at a conert"
                     class="gallery__collection-img gallery__collection-img--right gallery__collection-img--bottom">
             </div>
         </section>
@@ -96,27 +96,19 @@
                 </form>
             </div>
             <div class="comment__dom">
-                <!-- <img class="comment__img">
-                <div class="comment__section">
-                    <div class="comment__section-details">
-                        <p class="comment__section-details-name"></p>
-                        <p class="comment__section-details-date"></p>
-                    </div>
-                    <p class="comment__section-post"> </p>
-                </div> -->
             </div>
         </section>
         <footer class="footer">
             <section class="card card--social">
                 <h2 class="card__title">Get in Touch</h2>
                 <div class="card__collection card__collection--img">
-                    <img src="./assets/icons/Icon-instagram.svg" class="card__collection-img">
-                    <img src="./assets/icons/Icon-facebook.svg" class="card__collection-img">
-                    <img src="./assets/icons/Icon-twitter.svg" class="card__collection-img">
+                    <img src="./assets/icons/Icon-instagram.svg" alt="social icon" class="card__collection-img">
+                    <img src="./assets/icons/Icon-facebook.svg" alt="social icon" class="card__collection-img">
+                    <img src="./assets/icons/Icon-twitter.svg" alt="social icon" class="card__collection-img">
                 </div>
-                <img class="card__logo" src="./assets/logo/Logo-bandsite.svg">
+                <a class="card__logo" href="./index.html"><img class="bandsite" src="./assets/logo/Logo-bandsite.svg"></a>
             </section>
-
+    
             <section class="card card--contacts">
                 <div class="card__collection card__collection--first">
                     <div class="card__collection-group card__collection-group--who">
@@ -131,7 +123,7 @@
                         <p class="card__collection-group-item">info@thebeeskness.com</p>
                     </div>
                 </div>
-
+    
                 <div class="card__collection card__collection--middle">
                     <div class="card__collection-group card__collection-group--who">
                         <p class="card__collection-group-item">Pearl Gregg</p>
@@ -145,7 +137,7 @@
                         <p>pearl.gregg@limitlessag.com</p>
                     </div>
                 </div>
-
+    
                 <div class="card__collection card__collection--end">
                     <div class="card__collection-group card__collection-group--who">
                         <p class="card__collection-group-item">Carson Whyte</p>
@@ -159,10 +151,9 @@
                         <p class="card__collection-group-item">cwhyte@archentertainment.com</p>
                     </div>
                 </div>
+    
             </section>
-
-            <img src="./assets/logo/Logo-bandsite.svg" class="footer__img">
-
+            <a  class="footer__img" href="./index.html"><img class="bandsite" src="./assets/logo/Logo-bandsite.svg" alt="logo"></a>
             <p class="footer__legal">Copyright The Bees Knees © 2021 All Rights Reserved</p>
             </section>
         </footer>

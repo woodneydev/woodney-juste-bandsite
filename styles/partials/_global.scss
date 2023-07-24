@@ -1,367 +1,392 @@
-@use "mixins"as *;
-@use "variables"as *;
+@use "mixins" as *;
+@use "variables" as *;
 
 @font-face {
-    font-family: "Avenir";
-    src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("opentype");
-    src: url("../../assets/font/AvenirNextLTPro.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Avenir";
+  src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("opentype");
+  src: url("../../assets/font/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Avenir";
-    src: url("../../assets/font/AvenirNextLTPro-Demi.otf") format("opentype");
-    src: url("../../assets/font/AvenirNextLTProDemi.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
+  font-family: "Avenir";
+  src: url("../../assets/font/AvenirNextLTPro-Demi.otf") format("opentype");
+  src: url("../../assets/font/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Avenir";
-    src: url("../../assets/font/AvenirNextLTPro-Bold.otf") format("opentype");
-    src: url("../../assets/font/AvenirNextLTProBold.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
+  font-family: "Avenir";
+  src: url("../../assets/font/AvenirNextLTPro-Bold.otf") format("opentype");
+  src: url("../../assets/font/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Avenir", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Avenir", sans-serif;
 }
 
 h1 {
-    @include mobile-header;
-    @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
+  @include mobile-header;
+  @include title-spacing(
+    $mobile-padding-bf-headlines,
+    $mobile-padding-btw-components,
+    $mobile-padding-af-headlines
+  );
 
-    @include tablet {
-        @include page-header;
-        @include title-spacing($padding-before-headlines, $padding-between-components, $padding-after-headlines)
-    }
+  @include tablet {
+    @include page-header;
+    @include title-spacing(
+      $padding-before-headlines,
+      $padding-between-components,
+      $padding-after-headlines
+    );
+  }
 }
 
 h2 {
-    @include mobile-section-header;
-    color: $primary1;
-    @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
+  @include mobile-section-header;
+  color: $primary1;
+  @include title-spacing(
+    $mobile-padding-bf-headlines,
+    $mobile-padding-btw-components,
+    $mobile-padding-af-headlines
+  );
 
-    @include tablet {
-        @include section-header;
-        @include title-spacing($padding-before-headlines, $padding-between-components, $padding-after-headlines)
-    }
+  @include tablet {
+    @include section-header;
+    @include title-spacing(
+      $padding-before-headlines,
+      $padding-between-components,
+      $padding-after-headlines
+    );
+  }
 }
 
 h3 {
-    @include mobile-subheader;
-    color: $primary1;
-    @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
+  @include mobile-subheader;
+  color: $primary1;
+  @include title-spacing(
+    $mobile-padding-bf-headlines,
+    $mobile-padding-btw-components,
+    $mobile-padding-af-headlines
+  );
 
-    @include tablet {
-        @include subheader;
-        @include title-spacing($padding-before-headlines, $padding-between-components, $padding-after-headlines)
-    }
+  @include tablet {
+    @include subheader;
+    @include title-spacing(
+      $padding-before-headlines,
+      $padding-between-components,
+      $padding-after-headlines
+    );
+  }
 }
 
 p {
-    @include mobile-body;
+  @include mobile-body;
 
-    @include tablet {
-        @include body-copy;
-    }
+  @include tablet {
+    @include body-copy;
+  }
 }
 
 .paragraph {
-    @include paragraph-spacing($mobile-padding-btw-components, $mobile-padding-btw-components);
+  @include paragraph-spacing(
+    $mobile-padding-btw-components,
+    $mobile-padding-btw-components
+  );
 
-    @include tablet {}
+  @include tablet {
+  }
 }
 
 footer p {
-    @include mobile-footer-copy;
-    color: $primary3;
+  @include mobile-footer-copy;
+  color: $primary3;
 
-    @include tablet {
-        @include footer-copy;
-    }
+  @include tablet {
+    @include footer-copy;
+  }
 }
 
 label {
-    @include mobile-label;
-    color: $primary2;
+  @include mobile-label;
+  color: $primary2;
 
-    @include tablet {
-        @include labels;
-    }
+  @include tablet {
+    @include labels;
+  }
 }
 
-a, a:visited {
-    text-decoration: none;
+a,
+a:visited {
+  text-decoration: none;
+  display: block;
 }
 
+.bandsite {
+  width: 100%;
+}
 
 .nav {
-    background-color: $primary1;
+  background-color: $primary1;
 
-    &-bar {
-        color: $primary3;
-        //sets display to flex, params: (justify-content, align-items, flex-direction) - null sets default behavior
-        @include flex-box(center, center, column);
+  &-bar {
+    color: $primary3;
+    @include flex-box(center, center, column);
 
-        &__img {
-            margin-top: $mobile-padding-btw-components;
-            width: 120px;
+    &__img {
+      margin-top: $mobile-padding-btw-components;
+      width: 7.5rem;
 
-            @include tablet {
-                margin: 0 $padding-between-components;
-            }
+      @include tablet {
+        margin: 0 $padding-between-components;
+      }
 
-            @include desktop {
-                margin-left: 112px;
-            }
-        }
-
-        &__list {
-            @include flex-box(space-around, flex-end, row);
-            list-style-type: none;
-            width: 100%;
-
-            &-item {
-                text-align: center;
-                padding-top: $mobile-padding-btw-components;
-                padding-bottom: $mobile-padding-btw-components;
-                width: 50%;
-
-                &-link {
-                    color: $primary3;
-                }
-                
-                &:hover {
-                    border-bottom: .25rem solid $primary3;
-                }
-
-                &--active {
-                    border-bottom: .25rem solid $primary3;
-                }
-
-                @include tablet {
-                    padding: 32px 0;
-                    margin-right: $padding-between-components;
-                }
-            }
-
-            @include tablet {
-                align-items: baseline;
-                width: initial;
-            }
-
-            @include desktop {
-                // padding: 32px 0;
-                // width: 300px;
-            }
-        }
-
-        @include tablet {
-            @include flex-box (flex-start, null, row)
-        }
-
+      @include desktop {
+        margin-left: 7rem;
+      }
     }
 
-    .hero {
-        background-image: url("../../assets/images/hero-bio.jpg");
-        background-position: center;
-        background-size: cover;
-        height: 20vh;
-        color: $primary3;
+    &__list {
+      @include flex-box(space-around, flex-end, row);
+      list-style-type: none;
+      width: 100%;
 
-        &__title {
-            width: 100%;
-            height: 100%;
-            padding-left: $mobile-padding-btw-components;
-            padding-right: $mobile-padding-btw-components;
-            background-color: #32323250;
-            @include flex-box(null, center);
+      &-item {
+        text-align: center;
+        padding-top: $mobile-padding-btw-components;
+        padding-bottom: $mobile-padding-btw-components;
+        width: 50%;
 
-            @include tablet {
-                padding-left: $padding-between-components;
-                padding-right: $padding-between-components;
-            }
+        &-link {
+          color: $primary3;
 
-            @include desktop {
-                padding-left: 112px;
-                padding-right: 112px;
-            }
+          &--inactive {
+            color: #E1E1E1;
+          }
         }
 
+        &:hover {
+          border-bottom: 0.25rem solid $primary3;
+        }
+
+        &--active {
+          border-bottom: 0.25rem solid $primary3;
+        }
+        
         @include tablet {
-            height: 60vh;
-
+          padding: 2rem 0;
+          margin-right: $padding-between-components;
         }
+      }
 
-        @include desktop {
-            height: 80vh;
-        }
+      @include tablet {
+        align-items: baseline;
+        width: initial;
+      }
     }
+
+    @include tablet {
+      @include flex-box(flex-start, null, row);
+    }
+  }
+
+  .hero {
+    background-image: url("../../assets/images/hero-bio.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 20vh;
+    color: $primary3;
+
+    &__title {
+      width: 100%;
+      height: 100%;
+      padding-left: $mobile-padding-btw-components;
+      padding-right: $mobile-padding-btw-components;
+      background-color: #32323250;
+      @include flex-box(null, center);
+
+      @include tablet {
+        padding-left: $padding-between-components;
+        padding-right: $padding-between-components;
+      }
+
+      @include desktop {
+        padding-left: 7rem;
+        padding-right: 7rem;
+      }
+    }
+
+    @include tablet {
+      height: 60vh;
+    }
+
+    @include desktop {
+      height: 80vh;
+    }
+  }
 }
 
 .footer {
-    background-color: $primary1;
-    width: 100%;
+  background-color: $primary1;
+  width: 100%;
+  @include flex-box(null, null, column);
+
+  .card {
     @include flex-box(null, null, column);
 
-    .card {
-        @include flex-box(null, null, column);
+    &__title {
+      color: $primary3;
+      width: auto;
+      @include title-spacing(
+        $mobile-padding-bf-headlines,
+        $mobile-padding-btw-components,
+        $mobile-padding-af-headlines
+      );
 
-        &__title {
-            color: $primary3;
-            width: auto;
-            @include title-spacing($mobile-padding-bf-headlines, $mobile-padding-btw-components, $mobile-padding-af-headlines);
-
-            @include tablet {
-                flex: 0 0 auto;
-                @include title-spacing($padding-before-headlines, $padding-between-components, $padding-after-headlines);
-                padding: $padding-before-headlines 10.85px $padding-after-headlines 0px;
-                padding-right: 10.85px;
-            }
-        }
-
-        &__collection {
-            // width: auto;
-            padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
-
-            @include tablet {
-                padding: 0 $padding-between-components $padding-between-components;
-            }
-
-            // &--first{
-            //     padding-left: 112px;
-            // }
-
-            &-img {
-                height: 1.5rem;
-                margin-right: 1.5rem;
-            }
-
-            &--first {
-                @include tablet {
-                    padding-left: 0; 
-                }
-            }
-
-            &--middle {
-                padding: 0 16px;
-                @include tablet {
-                    padding: 0 16px; 
-                }
-                @include desktop {
-                    padding: 0 36px; 
-                }
-            }
-
-            &--end {
-                @include tablet {
-                    padding-right: 0;
-                }
-            }
-
-            &-group {
-                padding-bottom: $mobile-padding-btw-components;
-
-                &--who {
-                    font-weight: bold;
-                }
-
-                &-item{
-                    &--head {
-                        font-weight: bold;
-                    }
-                }
-            }
-
-            &--img {
-
-                @include tablet {
-                    display: flex;
-                    align-items: center;
-                    padding-left: 16px;
-                }
-
-                @include desktop {
-                    padding-left: 36px;
-                }
-            }
-
-        }
-
-        &__logo {
-            width: 150px;
-            display: none;
-
-            @include tablet {
-                display: block;
-                margin-left: auto;
-                // padding-right: $padding-between-components;
-            }
-
-            @include desktop {
-                // padding-right: 112px;
-            }
-            
-        }
-
-        &--social {
-            @include tablet {
-                display: flex;
-                width: 100%;
-                align-items: baseline;
-                justify-content: space-between;
-                padding-left: 36px;
-                padding-right: 36px;
-            }
-
-            @include desktop {
-                padding-left: 112px;
-                padding-right: 112px;
-            }
-        }
-
-        &--contacts {
-            @include tablet {
-                padding-left: 36px;
-                padding-right: 36px;
-            }
-
-            @include desktop {
-                padding-left: 112px;
-                padding-right: 112px;
-            }
-        }
-
-        @include tablet {
-            flex-direction: row;
-        }
+      @include tablet {
+        flex: 0 0 auto;
+        @include title-spacing(
+          $padding-before-headlines,
+          $padding-between-components,
+          $padding-after-headlines
+        );
+        padding: $padding-before-headlines 0.6781rem $padding-after-headlines
+          0rem;
+        padding-right: 0.6781rem;
+      }
     }
 
-    &__img {
-        margin-top: $mobile-padding-bf-headlines;
-        padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
-        width: 7.5rem;
+    &__collection {
+      padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
 
+      @include tablet {
+        padding: 0 $padding-between-components $padding-between-components;
+      }
+
+      &-img {
+        height: 1.5rem;
+        margin-right: 1.5rem;
+      }
+
+      &--first {
         @include tablet {
-            display: none;
+          padding-left: 0;
         }
-    }
+      }
 
-    &__legal {
-        padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
-
+      &--middle {
+        padding: 0 1rem;
         @include tablet {
-            padding: 0 $padding-between-components $padding-between-components;
+          padding: 0 1rem;
+        }
+        @include desktop {
+          padding: 0 2.25rem;
+        }
+      }
+
+      &--end {
+        @include tablet {
+          padding-right: 0;
+        }
+      }
+
+      &-group {
+        padding-bottom: $mobile-padding-btw-components;
+
+        &--who {
+          font-weight: bold;
+        }
+
+        &-item {
+          &--head {
+            font-weight: bold;
+          }
+        }
+      }
+
+      &--img {
+        @include tablet {
+          display: flex;
+          align-items: center;
+          padding-left: 1.5rem;
         }
 
         @include desktop {
-            padding: 0 112px;
+          padding-left: 2.75rem;
         }
+      }
     }
+
+    &__logo {
+      width: 9.375rem;
+      display: none;
+
+      @include tablet {
+        display: block;
+        margin-left: auto;
+      }
+    }
+
+    &--social {
+      @include tablet {
+        display: flex;
+        width: 100%;
+        align-items: baseline;
+        justify-content: space-between;
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+      }
+
+      @include desktop {
+        padding-left: 7rem;
+        padding-right: 7rem;
+      }
+    }
+
+    &--contacts {
+      @include tablet {
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+      }
+
+      @include desktop {
+        padding-left: 7rem;
+        padding-right: 7rem;
+      }
+    }
+
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__img {
+    margin-top: $mobile-padding-bf-headlines;
+    padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
+    width: 7.5rem;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__legal {
+    padding: 0 $mobile-padding-btw-components $mobile-padding-btw-components;
+
+    @include tablet {
+      padding: 0 $padding-between-components $padding-between-components;
+    }
+
+    @include desktop {
+      padding: 0 7rem;
+    }
+  }
 }

@@ -1,34 +1,29 @@
-//Font-sizes 
-$mobile-header-font: 1.5rem; // 24px
-$mobile-subheader-font: .875rem; // 14px
-$mobile-body-font: .8125rem; // 13px
-$mobile-label-font: .625rem; // 10px
+$mobile-header-font: 1.5rem;
+$mobile-subheader-font: 0.875rem;
+$mobile-body-font: 0.8125rem;
+$mobile-label-font: 0.625rem;
 
-$header-font: 3.75rem; // 60px
-$section-header-font: 2.25rem;// 36pxx
-$subheader-font: 1.5rem; // 24px
-$body-font: .875rem; // 14px
-$label-font: .75rem; // 12px
+$header-font: 3.75rem;
+$section-header-font: 2.25rem;
+$subheader-font: 1.5rem;
+$body-font: 0.875rem;
+$label-font: 0.75rem;
 
-// Colors
 $primary1: #323232;
-$primary2: #AFAFAF;
-$primary3: #FFFFFF;
+$primary2: #afafaf;
+$primary3: #ffffff;
 
 $seconday1: #000000;
-$seconday2: #E1E1E1;
-$seconday3: #FAFAFA;
+$seconday2: #e1e1e1;
+$seconday3: #fafafa;
 
-// Padding
-$mobile-padding-bf-headlines: 1.5rem; // padding before headlines
-$mobile-padding-af-headlines: 1rem; // padding after headlines
-$mobile-padding-btw-components: 1rem; // padding between components
+$mobile-padding-bf-headlines: 1.5rem;
+$mobile-padding-af-headlines: 1rem;
+$mobile-padding-btw-components: 1rem;
 
 $padding-before-headlines: 3rem;
 $padding-after-headlines: 2.25rem;
 $padding-between-components: 2.25rem;
 
-// Breakpoints
 $tablet: 768px;
 $desktop: 1280px;
-

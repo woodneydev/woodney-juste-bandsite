@@ -1,108 +1,116 @@
 @use "variables" as *;
 
 @mixin mobile-header {
-    font-size: $mobile-header-font;
-    line-height: 2rem; 
-    font-weight: 700; 
+  font-size: $mobile-header-font;
+  line-height: 2rem;
+  font-weight: 700;
 }
 
 @mixin mobile-section-header {
-    font-size: $mobile-header-font;
-    line-height: 2rem; 
-    font-weight: 700; 
+  font-size: $mobile-header-font;
+  line-height: 2rem;
+  font-weight: 700;
 }
 
 @mixin mobile-subheader {
-    font-size: $mobile-subheader-font;
-    line-height: 1.375rem;
-    font-weight: 600;
+  font-size: $mobile-subheader-font;
+  line-height: 1.375rem;
+  font-weight: 600;
 }
 
 @mixin mobile-body {
-    font-size: $mobile-body-font;
-    line-height: 1.125rem;
-    font-weight: 400;
+  font-size: $mobile-body-font;
+  line-height: 1.125rem;
+  font-weight: 400;
 }
 
 @mixin mobile-footer-copy {
-    font-size: $mobile-body-font;
-    line-height: 1.125rem;
-    font-weight: 400;
+  font-size: $mobile-body-font;
+  line-height: 1.125rem;
+  font-weight: 400;
 }
 
 @mixin mobile-label {
-    font-size: $mobile-label-font;
-    line-height: 1.25rem;
-    font-weight: 700;
+  font-size: $mobile-label-font;
+  line-height: 1.25rem;
+  font-weight: 700;
 }
 
 @mixin page-header {
-    font-size: $header-font;
-    line-height: 3.75rem;
-    font-weight: 700;
+  font-size: $header-font;
+  line-height: 3.75rem;
+  font-weight: 700;
 }
 
 @mixin section-header {
-    font-size: $section-header-font;
-    line-height: 2.75rem;
-    font-weight: 700;
+  font-size: $section-header-font;
+  line-height: 2.75rem;
+  font-weight: 600;
 }
 
 @mixin subheader {
-    font-size: $subheader-font;
-    line-height: 2rem;
-    font-weight: 600;
+  font-size: $subheader-font;
+  line-height: 2rem;
+  font-weight: 600;
 }
 
 @mixin body-copy {
-    font-size: $body-font;
-    line-height: 1.375rem;
-    font-weight: 400;
+  font-size: $body-font;
+  line-height: 1.375rem;
+  font-weight: 400;
 }
 
 @mixin footer-copy {
-    font-size: $body-font;
-    line-height: 1.25rem;
-    font-weight: 400;
+  font-size: $body-font;
+  line-height: 1.25rem;
+  font-weight: 400;
 }
 
 @mixin labels {
-    font-size: $label-font;
-    line-height: 1.25rem;
-    font-weight: 700;
+  font-size: $label-font;
+  line-height: 1.25rem;
+  font-weight: 700;
 }
 
-@mixin flex-box($justify-content: normal, $align-items: normal, $flex-direction: row) {
-    display: flex;
-    justify-content: $justify-content;
-    align-items: $align-items;
-    flex-direction: $flex-direction;
+@mixin flex-box(
+  $justify-content: normal,
+  $align-items: normal,
+  $flex-direction: row
+) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
 }
 
-@mixin title-spacing($padding-bf-headlines, $padding-btw-compenents, $padding-af-headlines) {
-    padding: $padding-bf-headlines $padding-btw-compenents $padding-af-headlines;
+@mixin title-spacing(
+  $padding-bf-headlines,
+  $padding-btw-compenents,
+  $padding-af-headlines
+) {
+  padding: $padding-bf-headlines $padding-btw-compenents $padding-af-headlines;
 }
 
 @mixin paragraph-spacing($left-right-pad, $bottom-pad) {
-    padding: 0 $left-right-pad $bottom-pad;
+  padding: 0 $left-right-pad $bottom-pad;
 }
 
 @mixin button {
-    border: none;
-    border-radius: 5px;
-    height: 40px;
-    color: $primary3;
-    background-color: $primary1;
+  border: none;
+  border-radius: 0.3125rem;
+  height: 2.5rem;
+  color: $primary3;
+  background-color: $primary1;
 }
 
 @mixin tablet {
-    @media screen and (min-width: $tablet) {
-        @content;
-    }
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media screen and (min-width: $desktop) {
-        @content;
-    }
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
 }
